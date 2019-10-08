@@ -29,8 +29,12 @@ CreativeWork +
 CreativeWorkSeason +
 CreativeWorkSeries +
 CssSelectorType +
+DataCatalog +
+DataDownload +
 DataFeed +
 DataFeedItem +
+Dataset +
+DataType +
 Date +
 DateTime +
 DayOfWeek +
@@ -46,6 +50,8 @@ Enumeration +
 Episode +
 Event +
 EventStatusType +
+FinancialProduct +
+Game +
 GamePlayMode +
 GameServer +
 GameServerStatus +
@@ -54,6 +60,7 @@ GeoCoordinates +
 GeoShape +
 GeospatialGeometry +
 ImageObject +
+Intangible +
 Integer +
 InteractionCounter +
 ItemAvailability +
@@ -89,6 +96,7 @@ OpeningHoursSpecification +
 Organization +
 OwnershipInfo +
 PaymentMethod +
+PerformingGroup +
 Person +
 Photograph +
 PhysicalActivityCategory +
@@ -104,6 +112,8 @@ PropertyValue +
 PublicationEvent +
 QualitativeValue +
 QuantitativeValue +
+QuantitativeValueDistribution +
+Quantity +
 Question +
 Rating +
 RefundTypeEnumeration +
