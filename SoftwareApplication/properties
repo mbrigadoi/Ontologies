@@ -5,15 +5,15 @@ description                                 Text
 disambiguatingDescription                   Text
 identifier                                  PropertyValue or Text or URL
 image                                       ImageObject or URL
-mainEntityOfPage                            CreativeWork or URL                                    INV: mainEntity
+mainEntityOfPage                            CreativeWork or URL                                     INV: mainEntity
 name                                        Text
 potentialAction                             Action
 sameAs                                      URL
-subjectOf                                   CreativeWork or Event                                  INV: about
+subjectOf                                   CreativeWork or Event                                   INV: about
 url                                         URL
 
 Thing > CreativeWork +
-about                                       Thing                                                  INV: subjectOf
+about                                       Thing                                                   INV: subjectOf
 accessMode                                  Text
 accessModeSufficient                        ItemList
 accessibilityAPI                            Text
@@ -50,13 +50,13 @@ discussionUrl                               URL
 editor                                      Person
 educationalAlignment                        AlignmentObject
 educationalUse                              Text
-encoding                                    MediaObject                                            INV: encodesCreativeWork
+encoding                                    MediaObject                                             INV: encodesCreativeWork
 encodingFormat                              Text or URL
-exampleOfWork                               CreativeWork                                           INV: workExample
+exampleOfWork                               CreativeWork                                            INV: workExample
 expires                                     Date
 funder                                      Organization or Person
 genre                                       Text or URL
-hasPart                                     CreativeWork                                           INV: isPartOf
+hasPart                                     CreativeWork                                            INV: isPartOf
 headline                                    Text
 inLanguage                                  Language or Text
 interactionStatistic                        InteractionCounter
@@ -64,12 +64,12 @@ interactivityType                           Text
 isAccessibleForFree                         Boolean
 isBasedOn                                   CreativeWork or Product or URL
 isFamilyFriendly                            Boolean
-isPartOf                                    CreativeWork                                           INV: hasPart
+isPartOf                                    CreativeWork                                            INV: hasPart
 keywords                                    Text
 learningResourceType                        Text
 license                                     CreativeWork or URL
 locationCreated                             Place
-mainEntity                                  Thing                                                  INV: mainEntityOfPage
+mainEntity                                  Thing                                                   INV: mainEntityOfPage
 material                                    Product or Text or URL
 materialExtent                              QuantitativeValue or Text
 mentions                                    Thing
@@ -81,7 +81,7 @@ publication                                 PublicationEvent
 publisher                                   Organization or Person
 publisherImprint                            Organization
 publishingPrinciples                        CreativeWork or URL
-recordedAt                                  Event                                                  INV: recordedIn
+recordedAt                                  Event                                                   INV: recordedIn
 releasedEvent                               PublicationEvent
 review                                      Review
 schemaVersion                               Text or URL
@@ -97,13 +97,13 @@ temporalCoverage                            DateTime or Text or URL
 text                                        Text
 thumbnailUrl                                URL
 timeRequired                                Duration
-translationOfWork                           CreativeWork                                           INV: workTranslation
+translationOfWork                           CreativeWork                                            INV: workTranslation
 translator                                  Organization or Person
 typicalAgeRange                             Text
 version                                     Number or Text
 video                                       Clip or VideoObject
-workExample                                 CreativeWork                                           INV: exampleOfWork
-workTranslation                             CreativeWork                                           INV: translationOfWork
+workExample                                 CreativeWork                                            INV: exampleOfWork
+workTranslation                             CreativeWork                                            INV: translationOfWork
 
 Thing > CreativeWork > SoftwareApplication +
 applicationCategory                         Text or URL
@@ -148,7 +148,7 @@ actor                                       Person
 cheatCode                                   CreativeWork
 director                                    Person
 gamePlatform                                Text or Thing or URL
-gameServer                                  GameServer                                             INV: game
+gameServer                                  GameServer                                              INV: game
 gameTip                                     CreativeWork
 musicBy                                     MusicGroup or Person
 playMode                                    GamePlayMode
@@ -156,6 +156,19 @@ trailer                                     VideoObject
 
 Thing > CreatieWork > WebSite +
 issn                                        Text
+
+Thing > CreativeWork > WebPage +
+breadcrumb                                  BreadcrumbList or Text
+lastReviewed                                Date
+mainContentOfPage                           WebPageElement
+primaryImageOfPage                          ImageObject
+relatedLink                                 URL
+reviewedBy                                  Organization or Person
+significantLink                             URL
+speakable                                   SpeakableSpecification or URL
+specialty                                   Specialty
+
+Thing > CreativeWork > WebPage > AboutPage +
 
 Thing > CreativeWork > Comment +
 downvoteCount                               Integer
@@ -169,12 +182,12 @@ parentItem                                  Question
 upvoteCount                                 Integer
 
 Thing > CreativeWork > Question +
-acceptedAnswer                              Answer or ItemList  
-answerCount                                 Integer     
-downvoteCount                               Integer     
-suggestedAnswer                             Answer or ItemList  
-upvoteCount                                 Integer 
- 
+acceptedAnswer                              Answer or ItemList
+answerCount                                 Integer
+downvoteCount                               Integer
+suggestedAnswer                             Answer or ItemList
+upvoteCount                                 Integer
+
 Thing > CreativeWork > Clip +
 actor                                       Person
 clipNumber                                  Integer or Text
@@ -187,33 +200,33 @@ partOfSeries                                CreativeWorkSeries
 startOffset                                 Number
 
 Thing > CreativeWork > Episode +
-actor                                       Person 	
-director                                    Person 	
-episodeNumber                               Integer or Text 	
-musicBy                                     MusicGroup or Person 	
-partOfSeason                                CreativeWorkSeason 	
-partOfSeries                                CreativeWorkSeries 	
-productionCompany                           Organization 	
-trailer                                     VideoObject 
+actor                                       Person
+director                                    Person
+episodeNumber                               Integer or Text
+musicBy                                     MusicGroup or Person
+partOfSeason                                CreativeWorkSeason
+partOfSeries                                CreativeWorkSeries
+productionCompany                           Organization
+trailer                                     VideoObject
 
 Thing > CreativeWork > CreativeWorkSeason +
-actor                                       Person 	
-director                                    Person 	
-endDate                                     Date or DateTime 	
-episode                                     Episode 	
-numberOfEpisodes                            Integer 	
-partOfSeries                                CreativeWorkSeries 	
-productionCompany                           Organization 	
-seasonNumber                                Integer or Text 	
-startDate                                   Date or DateTime 	
-trailer                                     VideoObject 
+actor                                       Person
+director                                    Person
+endDate                                     Date or DateTime
+episode                                     Episode
+numberOfEpisodes                            Integer
+partOfSeries                                CreativeWorkSeries
+productionCompany                           Organization
+seasonNumber                                Integer or Text
+startDate                                   Date or DateTime
+trailer                                     VideoObject
 
 Thing > Intangible > Series > CreativeWorkSeries +
 Thing > CreativeWork > CreativeWorkSeries +
-endDate                                     Date or DateTime 	
-issn                                        Text 	
-startDate                                   Date or DateTime 
- 
+endDate                                     Date or DateTime
+issn                                        Text
+startDate                                   Date or DateTime
+
 Thing > CreativeWork > MediaObject +
 associatedArticle                           NewsArticle
 bitrate                                     Text
@@ -221,7 +234,7 @@ contentSize                                 Text
 contentUrl                                  URL
 duration                                    Duration
 embedUrl                                    URL
-encodesCreativeWork                         CreativeWork                                           INV: encoding
+encodesCreativeWork                         CreativeWork                                            INV: encoding
 encodingFormat                              Text or URL
 endTime                                     DateTime or Time
 height                                      Distance or QuantitativeValue
@@ -257,29 +270,67 @@ Thing > CreativeWork > MediaObject > DataDownload +
 measurementTechnique                        Text or URL
 
 Thing > CreativeWork > DataCatalog +
-dataset                                     Dataset                                                INV: includedInDataCatalog
+dataset                                     Dataset                                                 INV: includedInDataCatalog
 measurementTechnique                        Text or URL
 
+Thing > CreativeWork > MusicRecording +
+byArtist                                    MusicGroup or Person
+duration                                    Duration
+inAlbum                                     MusicAlbum
+inPlaylist                                  MusicPlaylist
+isrcCode                                    Text
+recordingOf                                 MusicComposition                                        INV: recordedAs
+
+Thing > CreativeWork > MusicComposition +
+composer                                    Organization or Person
+firstPerformance                            Event
+includedComposition                         MusicComposition
+iswcCode                                    Text
+lyricist                                    Person
+lyrics                                      CreativeWork
+musicArrangement                            MusicComposition
+musicCompositionForm                        Text
+musicalKey                                  Text
+recordedAs                                  MusicRecording
+
+Thing > CreativeWork > MusicPlaylist +
+numTracks                                   Integer
+track                                       ItemList or MusicRecording
+
+Thing > CreativeWork > MusicPlaylist > MusicAlbum +
+albumProductionType                         MusicAlbumProductionType
+albumRelease                                MusicRelease                                            INV: releaseOf
+albumReleaseType                            MusicAlbumReleaseType
+byArtist                                    MusicGroup or Person
+
+Thing > CreativeWork > MusicPlaylist > MusicRelease +
+catalogNumber                               Text
+creditedTo                                  Organization or Person
+duration                                    Duration
+musicReleaseFormat                          MusicReleaseFormatType
+recordLabel                                 Organization
+releaseOf                                   MusicAlbum                                              INV: albumRelease
+
 Thing > CreativeWork > Article +
-articleBody                                 Text 	
-articleSection                              Text 	
-backstory                                   CreativeWork or Text 	
-pageEnd                                     Integer or Text 	
-pageStart                                   Integer or Text 	
-pagination                                  Text 	
-speakable                                   SpeakableSpecification or URL 
-wordCount                                   Integer 
+articleBody                                 Text
+articleSection                              Text
+backstory                                   CreativeWork or Text
+pageEnd                                     Integer or Text
+pageStart                                   Integer or Text
+pagination                                  Text
+speakable                                   SpeakableSpecification or URL
+wordCount                                   Integer
 
 Thing > CreativeWork > Article > NewsArticle +
 dateline                                    Text
-printColumn                                 Text 	
-printEdition                                Text 	
-printPage                                   Text 	
-printSection                                Text 
- 
+printColumn                                 Text
+printEdition                                Text
+printPage                                   Text
+printSection                                Text
+
 Thing > CreativeWork > Dataset +
 distribution                                DataDownload
-includedInDataCatalog                       DataCatalog                                            INV: dataset
+includedInDataCatalog                       DataCatalog                                             INV: dataset
 issn                                        Text
 measurementTechnique                        Text or URL
 variableMeasured                            PropertyValue or Text
@@ -287,32 +338,78 @@ variableMeasured                            PropertyValue or Text
 Thing > CreativeWork > Dataset > DataFeed +
 dataFeedElement                             DataFeedItem or Text or Thing
 
+Thing > CreativeWork > WebPageElement +
+cssSelector                                 CssSelectorType
+xpath                                       XPathType
+
 Thing > CreativeWork > Review +
 itemReviewed                                Thing
 reviewAspect                                Text
 reviewBody                                  Text
 reviewRating                                Rating
 
+Thing > CreativeWork > DefinedTermSet +
+hasDefinedTerm                              DefinedTerm
+
+Thing > CreativeWork > DefinedTermSet > CategoryCodeSet +
+hasCategoryCode                             CategoryCode
+
+Thing > CreativeWork > EducationalOccupationalCredential +
+competencyRequired                          DefinedTerm or Text or URL
+credentialCategory                          DefinedTerm or Text or URL
+educationalLevel                            DefinedTerm or Text or URL
+recognizedBy                                Organization
+validFor                                    Duration
+validIn                                     AdministrativeArea
+
+Thing > CreativeWork > Map +
+mapType                                     MapCategoryType 
+
+Thing > CreativeWork > Photograph +
+
 Thing > Intangible +
 Thing > Intangible > Language +
 Thing > Intangible > Quantity +
 Thing > Intangible > Quantity > Duration +
+Thing > Intangible > Quantity > Distance +
 Thing > Intangible > Enumeration +
 Thing > Intangible > Enumeration > GamePlayMode +
+Thing > Intangible > Enumeration > ContactPointOption +
+Thing > Intangible > Enumeration > DayOfWeek +
+Thing > Intangible > Enumeration > ItemListOrderType +
+Thing > Intangible > Enumeration > PaymentMethod +
+Thing > Intangible > Enumeration > ItemAvailability +
+Thing > Intangible > Enumeration > DeliveryMeyhod +
+Thing > Intangible > Enumeration > BusinessFunction +
+Thing > Intangible > Enumeration > BusinessEntityType +
+Thing > Intangible > Enumeration > PhysicalActivityCategory +
+Thing > Intangible > Enumeration > OfferItemCondition +
+Thing > Intangible > Enumeration > WarrantyScope +
+Thing > Intangible > Enumeration > ActionStatusType +
+Thing > Intangible > Enumeration > EventStatusType +
+Thing > Intangible > Enumeration > RefundTypeEnumeration +
+Thing > Intangible > Enumeration > ReturnFeesEnumeration +
+Thing > Intangible > Enumeration > ProductReturnEnumeration +
+Thing > Intangible > Enumeration > Specialty +
+Thing > Intangible > Enumeration > MusicAlbumProductionType  +
+Thing > Intangible > Enumeration > MusicAlbumReleaseType  +
+Thing > Intangible > Enumeration > MusicReleaseFormatType +
+Thing > Intangible > Enumeration > GenderType +
+Thing > Intangible > Enumeration > MapCategoryType +
 
 Thing > Intangible > StructuredValue +
-Thing > Intangible > StructuredValue > ContactPoint
-areaServed                                  AdministrativeArea or GeoShape or Place or Text     
-availableLanguage                           Language or Text    
-contactOption                               ContactPointOption  
-contactType                                 Text    
-email                                       Text    
-faxNumber                                   Text    
-hoursAvailable                              OpeningHoursSpecification   
-productSupported                            Product or Text     
-telephone                                   Text 
+Thing > Intangible > StructuredValue > ContactPoint +
+areaServed                                  AdministrativeArea or GeoShape or Place or Text
+availableLanguage                           Language or Text
+contactOption                               ContactPointOption
+contactType                                 Text
+email                                       Text
+faxNumber                                   Text
+hoursAvailable                              OpeningHoursSpecification
+productSupported                            Product or Text
+telephone                                   Text
 
-Thing > Intangible > StructuredValue > ContactPoint > PostalAddress
+Thing > Intangible > StructuredValue > ContactPoint > PostalAddress +
 addressCountry                              Country or Text
 addressLocality                             Text
 addressRegion                               Text
@@ -320,6 +417,180 @@ postOfficeBoxNumber                         Text
 postalCode                                  Text
 streetAddress                               Text
 
+Thing > Intangible > StructuredValue > InteractionCounter +
+interactionService                          SoftwareApplication or WebSite
+interactionType                             Action
+userInteractionCount                        Integer
+
+Thing > Intangible > StructuredValue > PropertyValue +
+maxValue                                    Number
+measurementTechnique                        Text or URL
+minValue                                    Number
+propertyID                                  Text or URL
+unitCode                                    Text or URL
+unitText                                    Text
+value                                       Boolean or Number or StructuredValue or Text
+valueReference                              Enumeration or PropertyValue or QualitativeValue or QuantitativeValue or StructuredValue
+
+Thing > Intangible > StructuredValue > PropertyValue > LocationFeatureSpecification +
+hoursAvailable                              OpeningHoursSpecification
+validFrom                                   Date or DateTime
+validThrough                                Date or DateTime
+
+Thing > Intangible > StructuredValue > GeoCoordinates +
+address                                     PostalAddress or Text
+addressCountry                              Country or Text
+elevation                                   Number or Text
+latitude                                    Number or Text
+longitude                                   Number or Text
+postalCode                                  Text
+
+Thing > Intangible > StructuredValue > QualitativeValue +
+
+Thing > Intangible > StructuredValue > QuantitativeValue +
+additionalProperty                          PropertyValue
+maxValue                                    Number
+minValue                                    Number
+unitCode                                    Text or URL
+unitText                                    Text
+value                                       Boolean or Number or StructuredValue or Text
+valueReference                              Enumeration or PropertyValue or QualitativeValue or QuantitativeValue or StructuredValue
+
+Thing > Intangible > StructuredValue > QuantitativeValueDistribution +
+duration                                    Duration
+median                                      Number
+percentile10                                Number
+percentile25                                Number
+percentile75                                Number
+percentile90                                Number
+
+Thing > Intangible > StructuredValue > QuantitativeValueDistribution > MonetaryAmountDistribution +
+currency                                    Text
+
+Thing > Intangible > StructuredValue > GeoShape +
+address                                     PostalAddress or Text
+addressCountry                              Country or Text
+box                                         Text
+circle                                      Text
+elevation                                   Number or Text
+line                                        Text
+polygon                                     Text
+postalCode                                  Text
+
+Thing > Intangible > StructuredValue > OpeningHoursSpecification +
+closes                                      Time
+dayOfWeek                                   DayOfWeek
+opens                                       Time
+validFrom                                   Date or DateTime
+validThrough                                Date or DateTime
+
+Thing > Intangible > StructuredValue > PriceSpecification +
+eligibleQuantity                            QuantitativeValue
+eligibleTransactionVolume                   PriceSpecification
+maxPrice                                    Number
+minPrice                                    Number
+price                                       Number or Text
+priceCurrency                               Text
+validFrom                                   Date or DateTime
+validThrough                                Date or DateTime
+valueAddedTaxIncluded                       Boolean
+
+Thing > Intangible > StructuredValue > TypeAndQuantityNode +
+amountOfThisGood                            Number
+businessFunction                            BusinessFunction
+typeOfGood                                  Product or Service
+unitCode                                    Text or URL
+unitText                                    Text
+
+Thing > Intangible > StructuredValue > WarrantyPromise +
+durationOfWarranty                          QuantitativeValue
+warrantyScope                               WarrantyScope
+
+Thing > Intangible > StructuredValue > MonetaryAmount +
+currency                                    Text
+maxValue                                    Number
+minValue                                    Number
+validFrom                                   Date or DateTime
+validThrough                                Date or DateTime
+value                                       Boolean or Number or StructuredValue or Text
+
+Thing > Intangible > StructuredValue > RepaymentSpecification +
+downPayment                                 MonetaryAmount or Number
+earlyPrepaymentPenalty                      MonetaryAmount
+loanPaymentAmount                           MonetaryAmount
+loanPaymentFrequency                        Number
+numberOfLoanPayments                        Number
+
+Thing > Intangible > StructuredValue > OwnershipInfo +
+acquiredFrom                                Organization or Person
+ownedFrom                                   DateTime
+ownedThrough                                DateTime
+typeOfGood                                  Product or Service
+
+Thing > Intangible > EntryPoint +
+actionApplication                           SoftwareApplication
+actionPlatform                              Text or URL
+contentType                                 Text
+encodingType                                Text
+httpMethod                                  Text
+urlTemplate                                 Text
+
+Thing > Intangible > GeospatialGeometry +
+geoContains                                 GeospatialGeometry or Place
+geoCoveredBy                                GeospatialGeometry or Place
+geoCovers                                   GeospatialGeometry or Place
+geoCrosses                                  GeospatialGeometry or Place
+geoDisjoint                                 GeospatialGeometry or Place
+geoEquals                                   GeospatialGeometry or Place
+geoIntersects                               GeospatialGeometry or Place
+geoOverlaps                                 GeospatialGeometry or Place
+geoTouches                                  GeospatialGeometry or Place
+geoWithin                                   GeospatialGeometry or Place
+
+Thing > Intangible > Occupation +
+educationRequirements                       EducationalOccupationalCredential or Text
+estimatedSalary                             MonetaryAmount or MonetaryAmountDistribution or Number
+experienceRequirements                      Text
+occupationLocation                          AdministrativeArea
+occupationalCategory                        CategoryCode or Text
+qualifications                              EducationalOccupationalCredential or Text
+responsibilities                            Text
+skills                                      Text
+
+Thing > Intangible > Demand +
+acceptedPaymentMethod                       LoanOrCredit or PaymentMethod
+advanceBookingRequirement                   QuantitativeValue
+areaServed                                  AdministrativeArea or GeoShape or Place or Text
+availability                                ItemAvailability
+availabilityEnd                             Date or DateTime or Time
+availabilityStarts                          Date or DateTime or Time
+availableAtOrFrom                           Place
+availableDeliveryMethod                     DeliveryMethod
+businessFunction                            BusinessFunction
+deliveryLeadTime                            QuantitativeValue
+eligibleCustomerType                        BusinessEntityType
+eligibleDuration                            QuantitativeValue
+eligibleQuantity                            QuantitativeValue
+eligibleRegion                              GeoShape or Place or Text
+eligibleTransactionVolume                   PriceSpecification
+gtin                                        Text
+gtin12                                      Text
+gtin13                                      Text
+gtin14                                      Text
+gtin8                                       Text
+includesObject                              TypeAndQuantityNode
+ineligibleRegion                            GeoShape or Place or Text
+inventoryLevel                              QuantitativeValue
+itemCondition                               OfferItemCondition
+itemOffered                                 Product or Service
+mpn                                         Text
+priceSpecification                          PriceSpecification
+seller                                      Organization or Person
+serialNumber                                Text
+sku                                         Text
+validFrom                                   Date or DateTime
+validThrough                                Date or DateTime
+warranty                                    WarrantyPromise
 
 Thing > Intangible > AlignmentObject +
 alignmentType                               Text
@@ -328,13 +599,17 @@ targetDescription                           Text
 targetName                                  Text
 targetUrl                                   URL
 
-Thing > Intangible > Audience
+Thing > Intangible > Audience +
 audienceType                                Text
 geographicArea                              AdministrativeArea
 
-Thing > Intangible > DefinedTerm
+Thing > Intangible > DefinedTerm +
 inDefinedTermSet                            DefinedTermSet or URL
 termCode                                    Text
+
+Thing > Intangible > DefinedTerm > CategoryCode +
+codeValue                                   Text
+inCodeSet                                   CategoryCodeSet or URL
 
 Thing > Intangible > DataFeedItem +
 dateCreated                                 Date or DateTime
@@ -344,23 +619,32 @@ item                                        Thing
 
 Thing > Intangible > SpeakableSpecification +
 cssSelector                                 CssSelectorType
-xpath                                       XPathType 
+xpath                                       XPathType
 
 Thing > Intangible > MediaSubscription +
-authenticator                               Organization 	
-expectsAcceptanceOf                         Offer 
+authenticator                               Organization
+expectsAcceptanceOf                         Offer
 
 Thing > Intangible > GameServer +
-game                                        VideoGame                                              INV: gameServer
+game                                        VideoGame                                               INV: gameServer
 playersOnline                               Integer
 serverStatus                                GameServerStatus
 
-Thing > Intangible > ItemList
+Thing > Intangible > ListItem +
+item                                        Thing
+nextItem                                    ListItem
+position                                    Integer or Text
+previousItem                                ListItem
+
+Thing > Intangible > ItemList +
 itemListElement                             ListItem or Text or Thing
 itemListOrder                               ItemListOrderType or Text
 numberOfItems                               Integer
 
-Thing > Intangible > Offer
+Thing > Intangible > ItemList > OfferCatalog +
+Thing > Intangible > ItemList > BreadcrumbList +
+
+Thing > Intangible > Offer +
 acceptedPaymentMethod                       LoanOrCredit or PaymentMethod
 addOn                                       Offer
 advanceBookingRequirement                   QuantitativeValue
@@ -390,7 +674,7 @@ inventoryLevel                              QuantitativeValue
 itemCondition                               OfferItemCondition
 itemOffered                                 Product or Service
 mpn                                         Text
-offeredBy                                   Organization or Person                                 INV: makesOffer
+offeredBy                                   Organization or Person                                  INV: makesOffer
 price                                       Number or Text
 priceCurrency                               Text
 priceSpecification                          PriceSpecification
@@ -403,32 +687,85 @@ validFrom                                   Date or DateTime
 validThrough                                Date or DateTime
 warranty                                    WarrantyPromise
 
+Thing > Intangible > Service +
+aggregateRating                             AggregateRating
+areaServed                                  AdministrativeArea or GeoShape or Place or Text
+audience                                    Audience
+availableChannel                            ServiceChannel
+award                                       Text
+brand                                       Brand or Organization
+broker                                      Organization or Person
+category                                    PhysicalActivityCategory or Text or Thing
+hasOfferCatalog                             OfferCatalog
+hoursAvailable                              OpeningHoursSpecification
+isRelatedTo                                 Product or Service
+isSimilarTo                                 Product or Service
+logo                                        ImageObject or URL
+offers                                      Offer
+provider                                    Organization or Person
+providerMobility                            Text
+review                                      Review
+serviceOutput                               Thing
+serviceType                                 Text
+slogan                                      Text
+termsOfService                              Text or URL
 
-Thing > Intangible > StructuredValue > InteractionCounter +
-interactionService                          SoftwareApplication or WebSite
-interactionType                             Action
-userInteractionCount                        Integer
+Thing > Intangible > Service > FinancialProduct +
+annualPercentageRate                        Number or QuantitativeValue
+feesAndCommissionsSpecification             Text or URL
+interestRate                                Number or QuantitativeValue
 
-Thing > Intangible > StructuredValue > PropertyValue +
-maxValue                                    Number
-measurementTechnique                        Text or URL
-minValue                                    Number
-propertyID                                  Text or URL
-unitCode                                    Text or URL
-unitText                                    Text
-value                                       Boolean or Number or StructuredValue or Text
-valueReference                              Enumeration or PropertyValue or QualitativeValue or QuantitativeValue or StructuredValue
+Thing > Intangible > Service > FinancialProduct > LoanOrCredit +
+amount                                      MonetaryAmount or Number
+currency                                    Text
+gracePeriod                                 Duration
+loanRepaymentForm                           RepaymentSpecification
+loanTerm                                    QuantitativeValue
+loanType                                    Text or URL
+recourseLoan                                Boolean
+renegotiableLoan                            Boolean
+requiredCollateral                          Text or Thing
 
-Thing > Intangible > StructuredValue > QualitativeValue +
+Thing > Intangible > Service > BroadcastService +
+broadcastAffiliateOf                        Organization
+broadcastDisplayName                        Text
+broadcastFrequency                          BroadcastFrequencySpecification or Text
+broadcastTimezone                           Text
+broadcaster                                 Organization
+hasBroadcastChannel                         BroadcastChannel
+parentService                               BroadcastService
+videoFormat                                 Text
 
-Thing > Intangible > StructuredValue > QuantitativeValue +
-additionalProperty                          PropertyValue
-maxValue                                    Number
-minValue                                    Number
-unitCode                                    Text or URL
-unitText                                    Text
-value                                       Boolean or Number or StructuredValue or Text
-valueReference                              Enumeration or PropertyValue or QualitativeValue or QuantitativeValue or StructuredValue
+Thing > Intangible > Service > CableOrSatelliteService +
+
+Thing > Intangible > BroadcastFrequencySpecification +
+broadcastFrequencyValue                     Number or QuantitativeValue
+broadcastSignalModulation                   QualitativeValue or Text
+broadcastSubChannel                         Text
+
+Thing > Intangible > BroadcastChannel +
+broadcastChannelId                          Text
+broadcastFrequency                          BroadcastFrequencySpecification or Text
+broadcastServiceTier                        Text
+genre                                       Text or URL
+inBroadcastLineup                           CableOrSatelliteService
+providesBroadcastService                    BroadcastService
+
+Thing > Intangible > ServiceChannel +
+availableLanguage                           Language or Text
+processingTime                              Duration
+providesService                             Service
+serviceLocation                             Place
+servicePhone                                ContactPoint
+servicePostalAddress                        PostalAddress
+serviceSmsNumber                            ContactPoint
+serviceUrl                                  URL
+
+Thing > Intangible > Brand +
+aggregateRating                             AggregateRating
+logo                                        ImageObject or URL
+review                                      Review
+slogan                                      Text
 
 Thing > Intangible > DataFeedItem +
 dateCreated                                 Date or DateTime
@@ -449,7 +786,22 @@ itemReviewed                                Thing
 ratingCount                                 Integer
 reviewCount                                 Integer
 
-Thing > Action
+Thing > Intangible > ProductReturnPolicy +
+inStoreReturnsOffered                       Boolean
+productReturnDays                           Integer
+productReturnLink                           URL
+refundType                                  RefundTypeEnumeration
+returnFees                                  ReturnFeesEnumeration
+returnPolicyCategory                        ProductReturnEnumeration
+
+Thing > Intangible > ProgramMembership +
+hostingOrganization                         Organization
+member                                      Organization or Person                                  INV: memberOf.
+membershipNumber                            Text
+membershipPointsEarned                      Number or QuantitativeValue
+programName                                 Text
+
+Thing > Action +
 actionStatus                                ActionStatusType
 agent                                       Organization or Person
 endTime                                     DateTime or Time
@@ -462,8 +814,8 @@ result                                      Thing
 startTime                                   DateTime or Time
 target                                      EntryPoint
 
-Thing > Event 
-about                                       Thing                                                  INV: subjectOf
+Thing > Event +
+about                                       Thing                                                   INV: subjectOf
 actor                                       Person
 aggregateRating                             AggregateRating
 attendee                                    Organization or Person
@@ -484,28 +836,28 @@ offers                                      Offer
 organizer                                   Organization or Person
 performer                                   Organization or Person
 previousStartDate                           Date
-recordedIn                                  CreativeWork                                           INV: recordedAt
+recordedIn                                  CreativeWork                                            INV: recordedAt
 remainingAttendeeCapacity                   Integer
 review                                      Review
 sponsor                                     Organization or Person
 startDate                                   Date or DateTime
-subEvent                                    Event                                                  INV: superEvent
-superEvent                                  Event                                                  INV: subEvent
+subEvent                                    Event                                                   INV: superEvent
+superEvent                                  Event                                                   INV: subEvent
 translator                                  Organization or Person
 typicalAgeRange                             Text
 workFeatured                                CreativeWork
 workPerformed                               CreativeWork
 
-Thing > Event > PublicationEvent
+Thing > Event > PublicationEvent +
 isAccessibleForFree                         Boolean
 publishedBy                                 Organization or Person
 publishedOn                                 BroadcastService
 
-Thing > Organization
+Thing > Organization +
 actionableFeedbackPolicy                    CreativeWork or URL
-address                                     PostalAddress orText
+address                                     PostalAddress or Text
 aggregateRating                             AggregateRating
-alumni                                      Person                                                 INV: alumniOf
+alumni                                      Person                                                  INV: alumniOf
 areaServed                                  AdministrativeArea or GeoShape or Place or Text
 award                                       Text
 brand                                       Brand or Organization
@@ -537,36 +889,39 @@ legalName                                   Text
 leiCode                                     Text
 location                                    Place or PostalAddress or Text
 logo                                        ImageObject or URL
-makesOffer                                  Offer                                                  INV: offeredBy
-member                                      Organization or Person                                 INV: memberOf
-memberOf                                    Organization or ProgramMembership                      INV: member
+makesOffer                                  Offer                                                   INV: offeredBy
+member                                      Organization or Person                                  INV: memberOf
+memberOf                                    Organization or ProgramMembership                       INV: member
 naics                                       Text
 numberOfEmployees                           QuantitativeValue
 ownershipFundingInfo                        AboutPage or CreativeWork or Text or URL
 owns                                        OwnershipInfo or Product
-parentOrganization                          Organization                                           INV: subOrganization
+parentOrganization                          Organization                                            INV: subOrganization
 publishingPrinciples                        CreativeWork or URL
 review                                      Review
 seeks                                       Demand
 slogan                                      Text
 sponsor                                     Organization or Person
-subOrganization                             Organization                                           INV: parentOrganization
+subOrganization                             Organization                                            INV: parentOrganization
 taxID                                       Text
 telephone                                   Text
 unnamedSourcesPolicy                        CreativeWork or URL
 vatID                                       Text
 
+Thing > Organization > EducationalOrganization +
+alumni                                      Person                                                  INV: alumniOf
+
 Thing > Organization > PerformingGroup +
-Thing > Organization > PerformingGroup > MusicGroup
+Thing > Organization > PerformingGroup > MusicGroup +
 album                                       MusicAlbum
 genre                                       Text or URL
 track                                       ItemList or MusicRecording
 
-Thing > Person
+Thing > Person +
 additionalName                              Text
 address                                     PostalAddress or Text
 affiliation                                 Organization
-alumniOf                                    EducationalOrganization or Organization                INV: alumni
+alumniOf                                    EducationalOrganization or Organization                 INV: alumni
 award                                       Text
 birthDate                                   Date
 birthPlace                                  Place
@@ -598,8 +953,8 @@ jobTitle                                    DefinedTerm or Text
 knows                                       Person
 knowsAbout                                  Text or Thing or URL
 knowsLanguage                               Language or Text
-makesOffer                                  Offer                                                  INV: offeredBy
-memberOf                                    Organization or ProgramMembership                      INV: member
+makesOffer                                  Offer                                                   INV: offeredBy
+memberOf                                    Organization or ProgramMembership                       INV: member
 naics                                       Text
 nationality                                 Country
 netWorth                                    MonetaryAmount or PriceSpecification
@@ -619,14 +974,14 @@ weight                                      QuantitativeValue
 workLocation                                ContactPoint or Place
 worksFor                                    Organization
 
-Thing > Place 
+Thing > Place +
 additionalProperty                          PropertyValue
 address                                     PostalAddress or Text
 aggregateRating                             AggregateRating
 amenityFeature                              LocationFeatureSpecification
 branchCode                                  Text
-containedInPlace                            Place                                                  INV: containsPlace
-containsPlace                               Place                                                  INV: containedInPlace
+containedInPlace                            Place                                                   INV: containsPlace
+containsPlace                               Place                                                   INV: containedInPlace
 event                                       Event
 faxNumber                                   Text
 geo                                         GeoCoordinates or GeoShape
@@ -655,7 +1010,10 @@ smokingAllowed                              Boolean
 specialOpeningHoursSpecification            OpeningHoursSpecification
 telephone                                   Text
 
-Thing > Product
+Thing > Place > AdministrativeArea +
+Thing > Place > AdministrativeArea > Country +
+
+Thing > Product +
 additionalProperty                          PropertyValue
 aggregateRating                             AggregateRating
 audience                                    Audience
@@ -692,3 +1050,8 @@ sku                                         Text
 slogan                                      Text
 weight                                      QuantitativeValue
 width                                       Distance or QuantitativeValue
+
+Thing > Product > ProductModel +
+isVariantOf                                 ProductModel 	
+predecessorOf                               ProductModel 	
+successorOf                                 ProductModel 
