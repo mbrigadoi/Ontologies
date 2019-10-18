@@ -562,7 +562,7 @@ acceptedPaymentMethod                       LoanOrCredit or PaymentMethod
 advanceBookingRequirement                   QuantitativeValue
 areaServed                                  AdministrativeArea or GeoShape or Place or Text
 availability                                ItemAvailability
-availabilityEnd                             Date or DateTime or Time
+availabilityEnds                            Date or DateTime or Time
 availabilityStarts                          Date or DateTime or Time
 availableAtOrFrom                           Place
 availableDeliveryMethod                     DeliveryMethod
