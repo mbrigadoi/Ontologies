@@ -796,7 +796,7 @@ returnPolicyCategory                        ProductReturnEnumeration
 
 Thing > Intangible > ProgramMembership +
 hostingOrganization                         Organization
-member                                      Organization or Person                                  INV: memberOf.
+member                                      Organization or Person                                  INV: memberOf
 membershipNumber                            Text
 membershipPointsEarned                      Number or QuantitativeValue
 programName                                 Text
