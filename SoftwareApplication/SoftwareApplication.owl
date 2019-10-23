@@ -56,15 +56,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://schema.org/Text"/>
-                    <rdf:Description rdf:about="http://schema.org/Thing"/>
-                    <rdf:Description rdf:about="http://schema.org/URL"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
         <rdfs:comment xml:lang="en">The subject matter of the content.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/about"/>
         <rdfs:label xml:lang="en">about</rdfs:label>
@@ -83,6 +75,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Answer"/>
+                    <rdf:Description rdf:about="http://schema.org/ItemList"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/acceptedAnswer"/>
         <rdfs:label xml:lang="en">acceptedAnswer</rdfs:label>
@@ -335,6 +335,15 @@
 
     <owl:ObjectProperty rdf:about="http://schema.org/actionableFeedbackPolicy">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/publishingPrinciples"/>
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">For a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsMediaOrganization&quot;&gt;NewsMediaOrganization&lt;/a&gt; or other news-related &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt;, a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/actionableFeedbackPolicy"/>
         <rdfs:label xml:lang="en">actionableFeedbackPolicy</rdfs:label>
@@ -432,6 +441,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the &apos;typeof&apos; attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/additionalType"/>
         <rdfs:label xml:lang="en">additionalType</rdfs:label>
@@ -561,6 +571,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">An organization that this person is affiliated with. For example, a school/university, a club, or a team.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/affiliation"/>
         <rdfs:label xml:lang="en">affiliation</rdfs:label>
@@ -655,13 +666,8 @@ Note: Publishers should be aware that applications designed to use specific sche
 
     <owl:ObjectProperty rdf:about="http://schema.org/albumRelease">
         <owl:inverseOf rdf:resource="http://schema.org/releaseOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://schema.org/MusicAlbum"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://schema.org/MusicAlbum"/>
+        <rdfs:range rdf:resource="http://schema.org/MusicRelease"/>
         <rdfs:comment xml:lang="en">A release of this album.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/albumRelease"/>
         <rdfs:label xml:lang="en">albumRelease</rdfs:label>
@@ -679,7 +685,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://schema.org/MusicRelease"/>
+        <rdfs:range rdf:resource="http://schema.org/MusicAlbumReleaseType"/>
         <rdfs:comment xml:lang="en">The kind of release which this album is: single, EP or album.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/albumReleaseType"/>
         <rdfs:label xml:lang="en">albumReleaseType</rdfs:label>
@@ -2048,6 +2054,14 @@ For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Position of the clip within an ordered group of clips.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/clipNumber"/>
         <rdfs:label xml:lang="en">clipNumber</rdfs:label>
@@ -2080,6 +2094,8 @@ For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
 
     <owl:ObjectProperty rdf:about="http://schema.org/codeValue">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/termCode"/>
+        <rdfs:domain rdf:resource="http://schema.org/CategoryCode"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A short textual code that uniquely identifies the value.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/codeValue"/>
         <rdfs:label xml:lang="en">codeValue</rdfs:label>
@@ -2532,6 +2548,15 @@ For example &quot;Available by appointment from the Reading Room&quot; or &quot;
 
     <owl:ObjectProperty rdf:about="http://schema.org/correctionsPolicy">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/publishingPrinciples"/>
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">For an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsMediaOrganization&quot;&gt;NewsMediaOrganization&lt;/a&gt;), a statement describing (in news media, the newsroom’s) disclosure and correction policy for errors.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/correctionsPolicy"/>
         <rdfs:label xml:lang="en">correctionsPolicy</rdfs:label>
@@ -3117,6 +3142,15 @@ Dateline summaries are oriented more towards human readers than towards automate
 
     <owl:ObjectProperty rdf:about="http://schema.org/diversityStaffingReport">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/publishingPrinciples"/>
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Article"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">For an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (often but not necessarily a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsMediaOrganization&quot;&gt;NewsMediaOrganization&lt;/a&gt;), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/diversityStaffingReport"/>
         <rdfs:label xml:lang="en">diversityStaffingReport</rdfs:label>
@@ -3751,6 +3785,14 @@ See also &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ineligib
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Position of the episode within an ordered group of episodes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/episodeNumber"/>
         <rdfs:label xml:lang="en">episodeNumber</rdfs:label>
@@ -4133,6 +4175,24 @@ See also &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ineligib
 
     <owl:ObjectProperty rdf:about="http://schema.org/funder">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/sponsor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A person or organization that supports (sponsors) something through some kind of financial contribution.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/funder"/>
         <rdfs:label xml:lang="en">funder</rdfs:label>
@@ -4651,15 +4711,7 @@ See also &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ineligib
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://schema.org/Duration"/>
-                    <rdf:Description rdf:about="http://schema.org/Text"/>
-                    <rdf:Description rdf:about="http://schema.org/URL"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://schema.org/Duration"/>
         <rdfs:comment xml:lang="en">The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://pending.schema.org/gracePeriod"/>
         <rdfs:label xml:lang="en">gracePeriod</rdfs:label>
@@ -5025,6 +5077,14 @@ See also &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ineligib
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/ContactPoint"/>
+                    <rdf:Description rdf:about="http://schema.org/Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A contact location for a person&apos;s residence.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/homeLocation"/>
         <rdfs:label xml:lang="en">homeLocation</rdfs:label>
@@ -6109,6 +6169,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The latitude of a location. For example &lt;code&gt;37.42242&lt;/code&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System&quot;&gt;WGS 84&lt;/a&gt;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/latitude"/>
         <rdfs:label xml:lang="en">latitude</rdfs:label>
@@ -6126,6 +6194,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The predominant type or kind characterizing the learning resource. For example, &apos;presentation&apos;, &apos;handout&apos;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/learningResourceType"/>
         <rdfs:label xml:lang="en">learningResourceType</rdfs:label>
@@ -6143,6 +6212,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The official name of the organization, e.g. the registered company name.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/legalName"/>
         <rdfs:label xml:lang="en">legalName</rdfs:label>
@@ -6179,6 +6249,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A license document that applies to this content, typically indicated by URL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/license"/>
         <rdfs:label xml:lang="en">license</rdfs:label>
@@ -6196,6 +6274,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/line"/>
         <rdfs:label xml:lang="en">line</rdfs:label>
@@ -6213,6 +6292,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MonetaryAmount"/>
         <rdfs:comment xml:lang="en">The amount of money to pay in a single payment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/loanPaymentAmount"/>
         <rdfs:label xml:lang="en">loanPaymentAmount</rdfs:label>
@@ -6251,6 +6331,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/RepaymentSpecification"/>
         <rdfs:comment xml:lang="en">A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/loanRepaymentForm"/>
         <rdfs:label xml:lang="en">loanRepaymentForm</rdfs:label>
@@ -6287,6 +6368,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The type of a loan or credit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/loanType"/>
         <rdfs:label xml:lang="en">loanType</rdfs:label>
@@ -6306,6 +6395,15 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Place"/>
+                    <rdf:Description rdf:about="http://schema.org/PostalAddress"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The location of for example where the event is happening, an organization is located, or where an action takes place.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/location"/>
         <rdfs:label xml:lang="en">location</rdfs:label>
@@ -6323,6 +6421,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
         <rdfs:comment xml:lang="en">The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/locationCreated"/>
         <rdfs:label xml:lang="en">locationCreated</rdfs:label>
@@ -6370,6 +6469,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The longitude of a location. For example &lt;code&gt;-122.08585&lt;/code&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/World_Geodetic_System&quot;&gt;WGS 84&lt;/a&gt;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/longitude"/>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
@@ -6387,6 +6494,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
         <rdfs:comment xml:lang="en">The person who wrote the words.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/lyricist"/>
         <rdfs:label xml:lang="en">lyricist</rdfs:label>
@@ -6404,6 +6512,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">The words in the song.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/lyrics"/>
         <rdfs:label xml:lang="en">lyrics</rdfs:label>
@@ -6421,6 +6530,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/WebPageElement"/>
     </owl:ObjectProperty>
     
 
@@ -6474,6 +6584,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Offer"/>
         <rdfs:comment xml:lang="en">A pointer to products or services offered by the organization or person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/makesOffer"/>
         <rdfs:label xml:lang="en">makesOffer</rdfs:label>
@@ -6484,6 +6595,8 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
     <!-- http://schema.org/manufacturer -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/manufacturer">
+        <rdfs:domain rdf:resource="http://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">The manufacturer of the product.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/manufacturer"/>
         <rdfs:label xml:lang="en">manufacturer</rdfs:label>
@@ -6501,6 +6614,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MapCategoryType"/>
         <rdfs:comment xml:lang="en">Indicates the kind of Map, from the MapCategoryType Enumeration.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/mapType"/>
         <rdfs:label xml:lang="en">mapType</rdfs:label>
@@ -6519,6 +6633,15 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A material that something is made from, e.g. leather, wool, cotton, paper.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/material"/>
         <rdfs:label xml:lang="en">material</rdfs:label>
@@ -6536,6 +6659,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The quantity of the materials being described or an expression of the physical space they occupy.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/materialExtent"/>
         <rdfs:label xml:lang="en">materialExtent</rdfs:label>
@@ -6613,6 +6744,14 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A technique or technology used in a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Dataset&quot;&gt;Dataset&lt;/a&gt; (or &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/DataDownload&quot;&gt;DataDownload&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/DataCatalog&quot;&gt;DataCatalog&lt;/a&gt;),
 corresponding to the method used for measuring the corresponding variable(s) (described using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/variableMeasured&quot;&gt;variableMeasured&lt;/a&gt;). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.&lt;br/&gt;&lt;br/&gt;
 
@@ -6660,6 +6799,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -6675,6 +6822,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/ProgramMembership"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">An Organization (or ProgramMembership) to which this Person or Organization belongs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/memberOf"/>
         <rdfs:label xml:lang="en">memberOf</rdfs:label>
@@ -6692,6 +6847,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A unique identifier for the membership.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/membershipNumber"/>
         <rdfs:label xml:lang="en">membershipNumber</rdfs:label>
@@ -6709,6 +6865,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (e.g. stars, miles, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/membershipPointsEarned"/>
         <rdfs:label xml:lang="en">membershipPointsEarned</rdfs:label>
@@ -6726,6 +6890,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Minimum memory requirements.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/memoryRequirements"/>
         <rdfs:label xml:lang="en">memoryRequirements</rdfs:label>
@@ -6743,6 +6915,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
         <rdfs:comment xml:lang="en">Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/mentions"/>
         <rdfs:label xml:lang="en">mentions</rdfs:label>
@@ -6774,6 +6947,15 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/minValue -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/minValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/MonetaryAmount"/>
+                    <rdf:Description rdf:about="http://schema.org/PropertyValue"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6795,6 +6977,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/ProductModel"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/model"/>
         <rdfs:label xml:lang="en">model</rdfs:label>
@@ -6814,6 +7004,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/mpn"/>
         <rdfs:label xml:lang="en">mpn</rdfs:label>
@@ -6831,6 +7022,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MusicComposition"/>
         <rdfs:comment xml:lang="en">An arrangement derived from the composition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/musicArrangement"/>
         <rdfs:label xml:lang="en">musicArrangement</rdfs:label>
@@ -6841,6 +7033,24 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/musicBy -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/musicBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Clip"/>
+                    <rdf:Description rdf:about="http://schema.org/Episode"/>
+                    <rdf:Description rdf:about="http://schema.org/VideoGame"/>
+                    <rdf:Description rdf:about="http://schema.org/VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/MusicGroup"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The composer of the soundtrack.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/musicBy"/>
         <rdfs:label xml:lang="en">musicBy</rdfs:label>
@@ -6858,6 +7068,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The type of composition (e.g. overture, sonata, symphony, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/musicCompositionForm"/>
         <rdfs:label xml:lang="en">musicCompositionForm</rdfs:label>
@@ -6875,6 +7086,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MusicReleaseFormatType"/>
         <rdfs:comment xml:lang="en">Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/musicReleaseFormat"/>
         <rdfs:label xml:lang="en">musicReleaseFormat</rdfs:label>
@@ -6892,6 +7104,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The key, mode, or scale this composition uses.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/musicalKey"/>
         <rdfs:label xml:lang="en">musicalKey</rdfs:label>
@@ -6910,6 +7123,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The North American Industry Classification System (NAICS) code for a particular organization or business person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/naics"/>
         <rdfs:label xml:lang="en">naics</rdfs:label>
@@ -6945,6 +7159,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Country"/>
         <rdfs:comment xml:lang="en">Nationality of the person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/nationality"/>
         <rdfs:label xml:lang="en">nationality</rdfs:label>
@@ -6962,6 +7177,14 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/MonetaryAmount"/>
+                    <rdf:Description rdf:about="http://schema.org/PriceSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The total financial value of the person as calculated by subtracting assets from liabilities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/netWorth"/>
         <rdfs:label xml:lang="en">netWorth</rdfs:label>
@@ -6979,6 +7202,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ListItem"/>
         <rdfs:comment xml:lang="en">A link to the ListItem that follows the current one.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/nextItem"/>
         <rdfs:label xml:lang="en">nextItem</rdfs:label>
@@ -7029,6 +7253,8 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/numberOfEmployees -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/numberOfEmployees">
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
         <rdfs:comment xml:lang="en">The number of employees in an organization e.g. business.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/numberOfEmployees"/>
         <rdfs:label xml:lang="en">numberOfEmployees</rdfs:label>
@@ -7039,6 +7265,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/numberOfEpisodes -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/numberOfEpisodes">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWorkSeason"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -7095,6 +7322,8 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/numberOfPlayers -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/numberOfPlayers">
+        <rdfs:domain rdf:resource="http://schema.org/Game"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
         <rdfs:comment xml:lang="en">Indicate how many people can play this game (minimum, maximum, or range).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/numberOfPlayers"/>
         <rdfs:label xml:lang="en">numberOfPlayers</rdfs:label>
@@ -7112,6 +7341,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
         <rdfs:comment xml:lang="en">The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn&apos;t). e.g. John read &lt;em&gt;a book&lt;/em&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/object"/>
         <rdfs:label xml:lang="en">object</rdfs:label>
@@ -7129,6 +7359,7 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/AdministrativeArea"/>
         <rdfs:comment xml:lang="en">The region/country for which this occupational description is appropriate. Note that educational requirements and qualifications can vary between jurisdictions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/occupationLocation"/>
         <rdfs:label xml:lang="en">occupationLocation</rdfs:label>
@@ -7139,6 +7370,15 @@ If there are several &lt;a class=&quot;localLink&quot; href=&quot;http://schema.
     <!-- http://schema.org/occupationalCategory -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/occupationalCategory">
+        <rdfs:domain rdf:resource="http://schema.org/Occupation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CategoryCode"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A category describing the job, preferably using a term from a taxonomy such as &lt;a href=&quot;http://www.onetcenter.org/taxonomy.html&quot;&gt;BLS O*NET-SOC&lt;/a&gt;, &lt;a href=&quot;https://www.ilo.org/public/english/bureau/stat/isco/isco08/&quot;&gt;ISCO-08&lt;/a&gt; or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.&lt;br/&gt;&lt;br/&gt;
 
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.</rdfs:comment>
@@ -7158,6 +7398,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A pointer to the organization or person making the offer.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/offeredBy"/>
         <rdfs:label xml:lang="en">offeredBy</rdfs:label>
@@ -7168,6 +7416,17 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/offers -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/offers">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                    <rdf:Description rdf:about="http://schema.org/Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Offer"/>
         <rdfs:comment xml:lang="en">An offer to provide this item&amp;#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/offers"/>
         <rdfs:label xml:lang="en">offers</rdfs:label>
@@ -7185,6 +7444,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/OpeningHoursSpecification"/>
         <rdfs:comment xml:lang="en">The opening hours of a certain place.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/openingHoursSpecification"/>
         <rdfs:label xml:lang="en">openingHoursSpecification</rdfs:label>
@@ -7223,6 +7483,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Operating systems supported (Windows 7, OSX 10.6, Android 1.6).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/operatingSystem"/>
         <rdfs:label xml:lang="en">operatingSystem</rdfs:label>
@@ -7240,6 +7501,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">An organizer of an Event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/organizer"/>
         <rdfs:label xml:lang="en">organizer</rdfs:label>
@@ -7293,6 +7562,17 @@ Note: for historical reasons, any textual label and formal code provided as a li
 
     <owl:ObjectProperty rdf:about="http://schema.org/ownershipFundingInfo">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/publishingPrinciples"/>
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/AboutPage"/>
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">For an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (often but not necessarily a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsMediaOrganization&quot;&gt;NewsMediaOrganization&lt;/a&gt;), a description of organizational ownership structure; funding and grants. In a news/media setting, this is with particular reference to editorial independence.   Note that the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/funder&quot;&gt;funder&lt;/a&gt; is also available and can be used to make basic funder information machine-readable.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/ownershipFundingInfo"/>
         <rdfs:label xml:lang="en">ownershipFundingInfo</rdfs:label>
@@ -7311,6 +7591,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/OwnershipInfo"/>
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Products owned by the organization or person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/owns"/>
         <rdfs:label xml:lang="en">owns</rdfs:label>
@@ -7321,6 +7609,15 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/pageEnd -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/pageEnd">
+        <rdfs:domain rdf:resource="http://schema.org/Article"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The page on which the work ends; for example &quot;138&quot; or &quot;xvi&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/pageEnd"/>
         <rdfs:label xml:lang="en">pageEnd</rdfs:label>
@@ -7331,6 +7628,15 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/pageStart -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/pageStart">
+        <rdfs:domain rdf:resource="http://schema.org/Article"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The page on which the work starts; for example &quot;135&quot; or &quot;xiii&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/pageStart"/>
         <rdfs:label xml:lang="en">pageStart</rdfs:label>
@@ -7341,6 +7647,8 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/pagination -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/pagination">
+        <rdfs:domain rdf:resource="http://schema.org/Article"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Any description of pages that is not separated into pageStart and pageEnd; for example, &quot;1-6, 9, 55&quot; or &quot;10-12, 46-49&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/pagination"/>
         <rdfs:label xml:lang="en">pagination</rdfs:label>
@@ -7358,6 +7666,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
     </owl:ObjectProperty>
     
 
@@ -7372,6 +7681,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Question"/>
         <rdfs:comment xml:lang="en">The parent of a question, answer or item in general.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/parentItem"/>
         <rdfs:label xml:lang="en">parentItem</rdfs:label>
@@ -7390,6 +7700,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
     </owl:ObjectProperty>
     
 
@@ -7404,6 +7715,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/BroadcastService"/>
         <rdfs:comment xml:lang="en">A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/parentService"/>
         <rdfs:label xml:lang="en">parentService</rdfs:label>
@@ -7478,6 +7790,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Other co-agents that participated in the action indirectly. e.g. John wrote a book with &lt;em&gt;Steve&lt;/em&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/participant"/>
         <rdfs:label xml:lang="en">participant</rdfs:label>
@@ -7579,6 +7899,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -7593,6 +7921,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
         <rdfs:comment xml:lang="en">Event that this person is a performer or participant in.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/performerIn"/>
         <rdfs:label xml:lang="en">performerIn</rdfs:label>
@@ -7610,6 +7939,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/permissions"/>
         <rdfs:label xml:lang="en">permissions</rdfs:label>
@@ -7643,6 +7973,8 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/playMode -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/playMode">
+        <rdfs:domain rdf:resource="http://schema.org/VideoGame"/>
+        <rdfs:range rdf:resource="http://schema.org/GamePlayMode"/>
         <rdfs:comment xml:lang="en">Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/playMode"/>
         <rdfs:label xml:lang="en">playMode</rdfs:label>
@@ -7660,6 +7992,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Player type required&amp;#x2014;for example, Flash or Silverlight.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/playerType"/>
         <rdfs:label xml:lang="en">playerType</rdfs:label>
@@ -7698,6 +8031,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/polygon"/>
         <rdfs:label xml:lang="en">polygon</rdfs:label>
@@ -7716,6 +8050,14 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The position of an item in a series or sequence of items.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/position"/>
         <rdfs:label xml:lang="en">position</rdfs:label>
@@ -7733,6 +8075,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The post office box number for PO box addresses.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/postOfficeBoxNumber"/>
         <rdfs:label xml:lang="en">postOfficeBoxNumber</rdfs:label>
@@ -7752,6 +8095,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The postal code. For example, 94043.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/postalCode"/>
         <rdfs:label xml:lang="en">postalCode</rdfs:label>
@@ -7769,6 +8113,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Action"/>
         <rdfs:comment xml:lang="en">Indicates a potential Action, which describes an idealized action in which this thing would play an &apos;object&apos; role.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/potentialAction"/>
         <rdfs:label xml:lang="en">potentialAction</rdfs:label>
@@ -7786,6 +8131,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ProductModel"/>
         <rdfs:comment xml:lang="en">A pointer from a previous, often discontinued variant of the product to its newer variant.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/predecessorOf"/>
         <rdfs:label xml:lang="en">predecessorOf</rdfs:label>
@@ -7803,6 +8149,7 @@ Note: for historical reasons, any textual label and formal code provided as a li
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ListItem"/>
         <rdfs:comment xml:lang="en">A link to the ListItem that preceeds the current one.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/previousItem"/>
         <rdfs:label xml:lang="en">previousItem</rdfs:label>
@@ -7834,6 +8181,22 @@ Note: for historical reasons, any textual label and formal code provided as a li
     <!-- http://schema.org/price -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/price">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                    <rdf:Description rdf:about="http://schema.org/PriceSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.&lt;br/&gt;&lt;br/&gt;
 
 Usage guidelines:&lt;br/&gt;&lt;br/&gt;
@@ -7854,6 +8217,15 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
     <!-- http://schema.org/priceCurrency -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/priceCurrency">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                    <rdf:Description rdf:about="http://schema.org/PriceSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The currency of the price, or a price component when attached to &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/PriceSpecification&quot;&gt;PriceSpecification&lt;/a&gt; and its subtypes.&lt;br/&gt;&lt;br/&gt;
 
 Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quot;&gt;ISO 4217 currency format&lt;/a&gt; e.g. &quot;USD&quot;; &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_cryptocurrencies&quot;&gt;Ticker symbol&lt;/a&gt; for cryptocurrencies e.g. &quot;BTC&quot;; well known names for &lt;a href=&quot;https://en.wikipedia.org/wiki/Local_exchange_trading_system&quot;&gt;Local Exchange Tradings Systems&lt;/a&gt; (LETS) and other currency types e.g. &quot;Ithaca HOUR&quot;.</rdfs:comment>
@@ -7866,6 +8238,15 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
     <!-- http://schema.org/priceSpecification -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/priceSpecification">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Demand"/>
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/PriceSpecification"/>
         <rdfs:comment xml:lang="en">One or more detailed price specifications, indicating the unit price and delivery or payment charges.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/priceSpecification"/>
         <rdfs:label xml:lang="en">priceSpecification</rdfs:label>
@@ -7904,6 +8285,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ImageObject"/>
         <rdfs:comment xml:lang="en">Indicates the main image on the page.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/primaryImageOfPage"/>
         <rdfs:label xml:lang="en">primaryImageOfPage</rdfs:label>
@@ -7921,6 +8303,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The number of the column in which the NewsArticle appears in the print edition.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/printColumn"/>
         <rdfs:label xml:lang="en">printColumn</rdfs:label>
@@ -7938,6 +8321,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The edition of the print product in which the NewsArticle appears.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/printEdition"/>
         <rdfs:label xml:lang="en">printEdition</rdfs:label>
@@ -7955,6 +8339,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/printPage"/>
         <rdfs:label xml:lang="en">printPage</rdfs:label>
@@ -7972,6 +8357,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">If this NewsArticle appears in print, this field indicates the print section in which the article appeared.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/printSection"/>
         <rdfs:label xml:lang="en">printSection</rdfs:label>
@@ -7989,6 +8375,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Duration"/>
         <rdfs:comment xml:lang="en">Estimated processing time for the service using this channel.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/processingTime"/>
         <rdfs:label xml:lang="en">processingTime</rdfs:label>
@@ -8006,6 +8393,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Processor architecture required to run the application (e.g. IA64).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/processorRequirements"/>
         <rdfs:label xml:lang="en">processorRequirements</rdfs:label>
@@ -8023,6 +8411,14 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/producer"/>
         <rdfs:label xml:lang="en">producer</rdfs:label>
@@ -8080,6 +8476,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">Indicates a Web page or service by URL, for product return.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/productReturnLink"/>
         <rdfs:label xml:lang="en">productReturnLink</rdfs:label>
@@ -8097,6 +8494,14 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. &quot;iPhone&quot;) or a general category of products or services (e.g. &quot;smartphones&quot;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/productSupported"/>
         <rdfs:label xml:lang="en">productSupported</rdfs:label>
@@ -8107,6 +8512,16 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
     <!-- http://schema.org/productionCompany -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/productionCompany">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWorkSeason"/>
+                    <rdf:Description rdf:about="http://schema.org/Episode"/>
+                    <rdf:Description rdf:about="http://schema.org/MediaObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">The production company or studio responsible for the item e.g. series, video game, episode etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/productionCompany"/>
         <rdfs:label xml:lang="en">productionCompany</rdfs:label>
@@ -8117,6 +8532,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
     <!-- http://schema.org/productionDate -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/productionDate">
+        <rdfs:domain rdf:resource="http://schema.org/Product"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -8138,6 +8554,7 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The program providing the membership.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/programName"/>
         <rdfs:label xml:lang="en">programName</rdfs:label>
@@ -8155,6 +8572,14 @@ Use standard formats: &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_4217&quo
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be
 (1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific id of the property), or (3)
 a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry).
@@ -8167,7 +8592,24 @@ Standards bodies should promote a standard prefix for the identifiers of propert
 
     <!-- http://schema.org/provider -->
 
-    <owl:ObjectProperty rdf:about="http://schema.org/provider"/>
+    <owl:ObjectProperty rdf:about="http://schema.org/provider">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
     
 
 
@@ -8181,6 +8623,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Indicates the mobility of a provided service (e.g. &apos;static&apos;, &apos;dynamic&apos;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/providerMobility"/>
         <rdfs:label xml:lang="en">providerMobility</rdfs:label>
@@ -8198,6 +8641,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/BroadcastService"/>
         <rdfs:comment xml:lang="en">The BroadcastService offered on this channel.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/providesBroadcastService"/>
         <rdfs:label xml:lang="en">providesBroadcastService</rdfs:label>
@@ -8215,6 +8659,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Service"/>
         <rdfs:comment xml:lang="en">The service provided by this channel.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/providesService"/>
         <rdfs:label xml:lang="en">providesService</rdfs:label>
@@ -8253,6 +8698,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/PublicationEvent"/>
         <rdfs:comment xml:lang="en">A publication event associated with the item.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/publication"/>
         <rdfs:label xml:lang="en">publication</rdfs:label>
@@ -8270,6 +8716,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">An agent associated with the publication event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://bib.schema.org/publishedBy"/>
         <rdfs:label xml:lang="en">publishedBy</rdfs:label>
@@ -8287,6 +8741,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/BroadcastService"/>
         <rdfs:comment xml:lang="en">A broadcast service associated with the publication event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/publishedOn"/>
         <rdfs:label xml:lang="en">publishedOn</rdfs:label>
@@ -8304,6 +8759,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The publisher of the creative work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/publisher"/>
         <rdfs:label xml:lang="en">publisher</rdfs:label>
@@ -8321,6 +8784,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">The publishing division which published the comic.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://bib.schema.org/publisherImprint"/>
         <rdfs:label xml:lang="en">publisherImprint</rdfs:label>
@@ -8340,6 +8804,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The publishingPrinciples property indicates (typically via &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/URL&quot;&gt;URL&lt;/a&gt;) a document describing the editorial principles of an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (or individual e.g. a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Person&quot;&gt;Person&lt;/a&gt; writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt; (e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsArticle&quot;&gt;NewsArticle&lt;/a&gt;) the principles are those of the party primarily responsible for the creation of the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/CreativeWork&quot;&gt;CreativeWork&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;
 
 While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/funder&quot;&gt;funder&lt;/a&gt;) can be expressed using schema.org terminology.</rdfs:comment>
@@ -8352,6 +8824,7 @@ While such policies are most typically expressed in natural language, sometimes 
     <!-- http://schema.org/purchaseDate -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/purchaseDate">
+        <rdfs:domain rdf:resource="http://schema.org/Product"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -8366,6 +8839,15 @@ While such policies are most typically expressed in natural language, sometimes 
     <!-- http://schema.org/qualifications -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/qualifications">
+        <rdfs:domain rdf:resource="http://schema.org/Occupation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/EducationalOccupationalCredential"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Specific qualifications required for this role or Occupation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/qualifications"/>
         <rdfs:label xml:lang="en">qualifications</rdfs:label>
@@ -8376,6 +8858,8 @@ While such policies are most typically expressed in natural language, sometimes 
     <!-- http://schema.org/quest -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/quest">
+        <rdfs:domain rdf:resource="http://schema.org/Game"/>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
         <rdfs:comment xml:lang="en">The task that a player-controlled character, or group of characters may complete in order to gain a reward.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/quest"/>
         <rdfs:label xml:lang="en">quest</rdfs:label>
@@ -8414,6 +8898,7 @@ While such policies are most typically expressed in natural language, sometimes 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A short explanation (e.g. one to two sentences) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with &quot;fact check&quot; markup using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ClaimReview&quot;&gt;ClaimReview&lt;/a&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/ratingExplanation"/>
         <rdfs:label xml:lang="en">ratingExplanation</rdfs:label>
@@ -8431,6 +8916,14 @@ While such policies are most typically expressed in natural language, sometimes 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The rating for the content.&lt;br/&gt;&lt;br/&gt;
 
 Usage guidelines:&lt;br/&gt;&lt;br/&gt;
@@ -8456,6 +8949,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">An organization that acknowledges the validity, value or utility of a credential. Note: recognition may include a process of quality assurance or accreditation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recognizedBy"/>
         <rdfs:label xml:lang="en">recognizedBy</rdfs:label>
@@ -8473,6 +8967,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">The label that issued the release.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recordLabel"/>
         <rdfs:label xml:lang="en">recordLabel</rdfs:label>
@@ -8491,6 +8986,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MusicRecording"/>
         <rdfs:comment xml:lang="en">An audio recording of the work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recordedAs"/>
         <rdfs:label xml:lang="en">recordedAs</rdfs:label>
@@ -8509,6 +9005,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
         <rdfs:comment xml:lang="en">The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recordedAt"/>
         <rdfs:label xml:lang="en">recordedAt</rdfs:label>
@@ -8526,6 +9023,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">The CreativeWork that captured all or part of this Event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recordedIn"/>
         <rdfs:label xml:lang="en">recordedIn</rdfs:label>
@@ -8543,6 +9041,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MusicComposition"/>
         <rdfs:comment xml:lang="en">The composition this track is a recording of.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recordingOf"/>
         <rdfs:label xml:lang="en">recordingOf</rdfs:label>
@@ -8581,6 +9080,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/RefundTypeEnumeration"/>
         <rdfs:comment xml:lang="en">A refundType, from an enumerated list.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/refundType"/>
         <rdfs:label xml:lang="en">refundType</rdfs:label>
@@ -8598,6 +9098,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
         <rdfs:comment xml:lang="en">The regions where the media is allowed. If not specified, then it&apos;s assumed to be allowed everywhere. Specify the countries in &lt;a href=&quot;http://en.wikipedia.org/wiki/ISO_3166&quot;&gt;ISO 3166 format&lt;/a&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/regionsAllowed"/>
         <rdfs:label xml:lang="en">regionsAllowed</rdfs:label>
@@ -8615,6 +9116,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">A link related to this web page, for example to other related web pages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/relatedLink"/>
         <rdfs:label xml:lang="en">relatedLink</rdfs:label>
@@ -8632,6 +9134,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
         <rdfs:comment xml:lang="en">The most generic familial relation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/relatedTo"/>
         <rdfs:label xml:lang="en">relatedTo</rdfs:label>
@@ -8670,6 +9173,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Description of what changed in this version.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/releaseNotes"/>
         <rdfs:label xml:lang="en">releaseNotes</rdfs:label>
@@ -8687,6 +9198,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/MusicAlbum"/>
         <rdfs:comment xml:lang="en">The album this is a release of.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/releaseOf"/>
         <rdfs:label xml:lang="en">releaseOf</rdfs:label>
@@ -8704,6 +9216,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/PublicationEvent"/>
         <rdfs:comment xml:lang="en">The place and time the release was issued, expressed as a PublicationEvent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/releasedEvent"/>
         <rdfs:label xml:lang="en">releasedEvent</rdfs:label>
@@ -8784,6 +9297,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/requiredCollateral"/>
         <rdfs:label xml:lang="en">requiredCollateral</rdfs:label>
@@ -8794,6 +9315,15 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
     <!-- http://schema.org/requiresSubscription -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/requiresSubscription">
+        <rdfs:domain rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Boolean"/>
+                    <rdf:Description rdf:about="http://schema.org/MediaSubscription"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Indicates if use of the media require a subscription  (either paid or free). Allowed values are &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt; (note that an earlier version had &apos;yes&apos;, &apos;no&apos;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/requiresSubscription"/>
         <rdfs:label xml:lang="en">requiresSubscription</rdfs:label>
@@ -8804,6 +9334,8 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
     <!-- http://schema.org/responsibilities -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/responsibilities">
+        <rdfs:domain rdf:resource="http://schema.org/Occupation"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Responsibilities associated with this role or Occupation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/responsibilities"/>
         <rdfs:label xml:lang="en">responsibilities</rdfs:label>
@@ -8821,6 +9353,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
         <rdfs:comment xml:lang="en">The result produced in the action. e.g. John wrote &lt;em&gt;a book&lt;/em&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/result"/>
         <rdfs:label xml:lang="en">result</rdfs:label>
@@ -8838,6 +9371,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ReturnFeesEnumeration"/>
         <rdfs:comment xml:lang="en">Indicates (via enumerated options) the return fees policy for a ProductReturnPolicy</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/returnFees"/>
         <rdfs:label xml:lang="en">returnFees</rdfs:label>
@@ -8855,6 +9389,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ProductReturnEnumeration"/>
         <rdfs:comment xml:lang="en">A returnPolicyCategory expresses at most one of several enumerated kinds of return.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/returnPolicyCategory"/>
         <rdfs:label xml:lang="en">returnPolicyCategory</rdfs:label>
@@ -8879,6 +9414,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Review"/>
     </owl:ObjectProperty>
     
 
@@ -8894,6 +9430,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">This Review or Rating is relevant to this part or facet of the itemReviewed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/reviewAspect"/>
         <rdfs:label xml:lang="en">reviewAspect</rdfs:label>
@@ -8911,6 +9448,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The actual body of the review.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/reviewBody"/>
         <rdfs:label xml:lang="en">reviewBody</rdfs:label>
@@ -8949,6 +9487,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Rating"/>
         <rdfs:comment xml:lang="en">The rating given in this review. Note that reviews can themselves be rated. The &lt;code&gt;reviewRating&lt;/code&gt; applies to rating given by the review. The &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/aggregateRating&quot;&gt;aggregateRating&lt;/a&gt; property applies to the review itself, as a creative work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/reviewRating"/>
         <rdfs:label xml:lang="en">reviewRating</rdfs:label>
@@ -8966,6 +9505,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">People or organizations that have reviewed the content on this web page for accuracy and/or completeness.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/reviewedBy"/>
         <rdfs:label xml:lang="en">reviewedBy</rdfs:label>
@@ -8983,6 +9530,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">URL of a reference Web page that unambiguously indicates the item&apos;s identity. E.g. the URL of the item&apos;s Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/sameAs"/>
         <rdfs:label xml:lang="en">sameAs</rdfs:label>
@@ -9000,6 +9548,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/schemaVersion"/>
         <rdfs:label xml:lang="en">schemaVersion</rdfs:label>
@@ -9017,6 +9573,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/ImageObject"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A link to a screenshot image of the app.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/screenshot"/>
         <rdfs:label xml:lang="en">screenshot</rdfs:label>
@@ -9055,6 +9619,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A license document that applies to this structured data, typically indicated by URL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/sdLicense"/>
         <rdfs:label xml:lang="en">sdLicense</rdfs:label>
@@ -9072,6 +9644,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
 &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/sdPublisher&quot;&gt;sdPublisher&lt;/a&gt; property helps make such practices more explicit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/sdPublisher"/>
@@ -9091,6 +9671,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Integer"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Position of the season within an ordered group of seasons.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/seasonNumber"/>
         <rdfs:label xml:lang="en">seasonNumber</rdfs:label>
@@ -9109,6 +9697,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Demand"/>
         <rdfs:comment xml:lang="en">A pointer to products or services sought by the organization or person (demand).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/seeks"/>
         <rdfs:label xml:lang="en">seeks</rdfs:label>
@@ -9120,6 +9709,22 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
 
     <owl:ObjectProperty rdf:about="http://schema.org/seller">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/participant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Demand"/>
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -9154,6 +9759,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/GameServerStatus"/>
         <rdfs:comment xml:lang="en">Status of a game server.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/serverStatus"/>
         <rdfs:label xml:lang="en">serverStatus</rdfs:label>
@@ -9171,6 +9777,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
         <rdfs:comment xml:lang="en">The location (e.g. civic structure, local business, etc.) where a person can go to access the service.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/serviceLocation"/>
         <rdfs:label xml:lang="en">serviceLocation</rdfs:label>
@@ -9188,6 +9795,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Thing"/>
     </owl:ObjectProperty>
     
 
@@ -9202,6 +9810,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ContactPoint"/>
         <rdfs:comment xml:lang="en">The phone number to use to access the service.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/servicePhone"/>
         <rdfs:label xml:lang="en">servicePhone</rdfs:label>
@@ -9219,6 +9828,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/PostalAddress"/>
         <rdfs:comment xml:lang="en">The address for accessing the service by mail.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/servicePostalAddress"/>
         <rdfs:label xml:lang="en">servicePostalAddress</rdfs:label>
@@ -9236,6 +9846,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ContactPoint"/>
         <rdfs:comment xml:lang="en">The number to access the service by text message.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/serviceSmsNumber"/>
         <rdfs:label xml:lang="en">serviceSmsNumber</rdfs:label>
@@ -9253,6 +9864,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The type of service being offered, e.g. veterans&apos; benefits, emergency relief, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/serviceType"/>
         <rdfs:label xml:lang="en">serviceType</rdfs:label>
@@ -9270,6 +9882,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">The website to access the service.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/serviceUrl"/>
         <rdfs:label xml:lang="en">serviceUrl</rdfs:label>
@@ -9287,6 +9900,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
     </owl:ObjectProperty>
     
 
@@ -9301,6 +9915,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
     </owl:ObjectProperty>
     
 
@@ -9308,6 +9923,8 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
     <!-- http://schema.org/skills -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/skills">
+        <rdfs:domain rdf:resource="http://schema.org/Occupation"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Skills required to fulfill this role or in this Occupation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/skills"/>
         <rdfs:label xml:lang="en">skills</rdfs:label>
@@ -9350,6 +9967,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A slogan or motto associated with the item.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/slogan"/>
         <rdfs:label xml:lang="en">slogan</rdfs:label>
@@ -9388,6 +10006,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/SoftwareApplication"/>
         <rdfs:comment xml:lang="en">Additional content for a software application.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/softwareAddOn"/>
         <rdfs:label xml:lang="en">softwareAddOn</rdfs:label>
@@ -9405,6 +10024,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">Software application help.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/softwareHelp"/>
         <rdfs:label xml:lang="en">softwareHelp</rdfs:label>
@@ -9422,6 +10042,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -9436,6 +10064,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">Version of the software instance.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/softwareVersion"/>
         <rdfs:label xml:lang="en">softwareVersion</rdfs:label>
@@ -9453,6 +10082,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">The Organization on whose behalf the creator was working.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/sourceOrganization"/>
         <rdfs:label xml:lang="en">sourceOrganization</rdfs:label>
@@ -9470,6 +10100,7 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
         <rdfs:comment xml:lang="en">The &quot;spatial&quot; property can be used in cases when more specific properties
 (e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/locationCreated&quot;&gt;locationCreated&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/spatialCoverage&quot;&gt;spatialCoverage&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/contentLocation&quot;&gt;contentLocation&lt;/a&gt;) are not known to be appropriate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/spatial"/>
@@ -9510,6 +10141,14 @@ Usage guidelines:&lt;br/&gt;&lt;br/&gt;
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/SpeakableSpecification"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Indicates sections of a Web page that are particularly &apos;speakable&apos; in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the &apos;speakable&apos; property serves to indicate the parts most likely to be generally useful for speech.&lt;br/&gt;&lt;br/&gt;
 
 The &lt;em&gt;speakable&lt;/em&gt; property can be repeated an arbitrary number of times, with three kinds of possible &apos;content-locator&apos; values:&lt;br/&gt;&lt;br/&gt;
@@ -9538,6 +10177,7 @@ we define a supporting type, &lt;a class=&quot;localLink&quot; href=&quot;http:/
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/OpeningHoursSpecification"/>
         <rdfs:comment xml:lang="en">The special opening hours of a certain place.&lt;br/&gt;&lt;br/&gt;
 
 Use this to explicitly override general opening hours brought in scope by &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/openingHoursSpecification&quot;&gt;openingHoursSpecification&lt;/a&gt; or &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/openingHours&quot;&gt;openingHours&lt;/a&gt;.</rdfs:comment>
@@ -9557,6 +10197,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Specialty"/>
         <rdfs:comment xml:lang="en">One of the domain specialities to which this web page&apos;s content applies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/specialty"/>
         <rdfs:label xml:lang="en">specialty</rdfs:label>
@@ -9567,6 +10208,24 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/sponsor -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/sponsor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/sponsor"/>
         <rdfs:label xml:lang="en">sponsor</rdfs:label>
@@ -9584,6 +10243,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
         <rdfs:comment xml:lang="en">The person&apos;s spouse.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/spouse"/>
         <rdfs:label xml:lang="en">spouse</rdfs:label>
@@ -9594,6 +10254,15 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/startDate -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/startDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWorkSeason"/>
+                    <rdf:Description rdf:about="http://schema.org/CreativeWorkSeries"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -9630,6 +10299,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/startTime -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/startTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Action"/>
+                    <rdf:Description rdf:about="http://schema.org/MediaObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -9652,6 +10329,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Storage requirements (free space required).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/storageRequirements"/>
         <rdfs:label xml:lang="en">storageRequirements</rdfs:label>
@@ -9669,6 +10354,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The street address. For example, 1600 Amphitheatre Pkwy.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/streetAddress"/>
         <rdfs:label xml:lang="en">streetAddress</rdfs:label>
@@ -9687,6 +10373,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
@@ -9701,6 +10388,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific &apos;department&apos; property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/subOrganization"/>
         <rdfs:label xml:lang="en">subOrganization</rdfs:label>
@@ -9718,6 +10406,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A CreativeWork or Event about this Thing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/subjectOf"/>
         <rdfs:label xml:lang="en">subjectOf</rdfs:label>
@@ -9735,6 +10431,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ProductModel"/>
         <rdfs:comment xml:lang="en">A pointer from a newer variant of a product  to its previous, often discontinued predecessor.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/successorOf"/>
         <rdfs:label xml:lang="en">successorOf</rdfs:label>
@@ -9752,6 +10449,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Answer"/>
+                    <rdf:Description rdf:about="http://schema.org/ItemList"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">An answer (possibly one of several, possibly incorrect) to a Question, e.g. on a Question/Answer site.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/suggestedAnswer"/>
         <rdfs:label xml:lang="en">suggestedAnswer</rdfs:label>
@@ -9769,6 +10474,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
         <rdfs:comment xml:lang="en">An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/superEvent"/>
         <rdfs:label xml:lang="en">superEvent</rdfs:label>
@@ -9786,6 +10492,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/DataFeed"/>
         <rdfs:comment xml:lang="en">Supporting data for a SoftwareApplication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/supportingData"/>
         <rdfs:label xml:lang="en">supportingData</rdfs:label>
@@ -9803,6 +10510,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/EntryPoint"/>
         <rdfs:comment xml:lang="en">Indicates a target EntryPoint for an Action.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/target"/>
         <rdfs:label xml:lang="en">target</rdfs:label>
@@ -9820,6 +10528,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The description of a node in an established educational framework.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/targetDescription"/>
         <rdfs:label xml:lang="en">targetDescription</rdfs:label>
@@ -9837,6 +10546,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The name of a node in an established educational framework.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/targetName"/>
         <rdfs:label xml:lang="en">targetName</rdfs:label>
@@ -9854,6 +10564,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">The URL of a node in an established educational framework.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/targetUrl"/>
         <rdfs:label xml:lang="en">targetUrl</rdfs:label>
@@ -9894,6 +10605,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The telephone number.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/telephone"/>
         <rdfs:label xml:lang="en">telephone</rdfs:label>
@@ -9911,6 +10623,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/DateTime"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The &quot;temporal&quot; property can be used in cases where more specific properties
 (e.g. &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/temporalCoverage&quot;&gt;temporalCoverage&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/dateCreated&quot;&gt;dateCreated&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/dateModified&quot;&gt;dateModified&lt;/a&gt;, &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/datePublished&quot;&gt;datePublished&lt;/a&gt;) are not known to be appropriate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/temporal"/>
@@ -9929,6 +10649,15 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/DateTime"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -9943,6 +10672,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A code that identifies this &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/DefinedTerm&quot;&gt;DefinedTerm&lt;/a&gt; within a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/DefinedTermSet&quot;&gt;DefinedTermSet&lt;/a&gt;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/termCode"/>
         <rdfs:label xml:lang="en">termCode</rdfs:label>
@@ -9960,6 +10690,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Human-readable terms of service documentation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/termsOfService"/>
         <rdfs:label xml:lang="en">termsOfService</rdfs:label>
@@ -9977,6 +10715,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The textual content of this CreativeWork.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/text"/>
         <rdfs:label xml:lang="en">text</rdfs:label>
@@ -9995,6 +10734,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/ImageObject"/>
         <rdfs:comment xml:lang="en">Thumbnail image for an image or video.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/thumbnail"/>
         <rdfs:label xml:lang="en">thumbnail</rdfs:label>
@@ -10012,6 +10752,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">A thumbnail image relevant to the Thing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/thumbnailUrl"/>
         <rdfs:label xml:lang="en">thumbnailUrl</rdfs:label>
@@ -10029,6 +10770,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Duration"/>
         <rdfs:comment xml:lang="en">Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. &apos;PT30M&apos;, &apos;PT1H25M&apos;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/timeRequired"/>
         <rdfs:label xml:lang="en">timeRequired</rdfs:label>
@@ -10047,6 +10789,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/ItemList"/>
+                    <rdf:Description rdf:about="http://schema.org/MusicRecording"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -10054,6 +10804,16 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/trailer -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/trailer">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWorkSeason"/>
+                    <rdf:Description rdf:about="http://schema.org/Episode"/>
+                    <rdf:Description rdf:about="http://schema.org/VideoGame"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/VideoObject"/>
         <rdfs:comment xml:lang="en">The trailer of a movie or tv/radio series, season, episode, etc.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/trailer"/>
         <rdfs:label xml:lang="en">trailer</rdfs:label>
@@ -10072,6 +10832,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">If this MediaObject is an AudioObject or VideoObject, the transcript of that object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/transcript"/>
         <rdfs:label xml:lang="en">transcript</rdfs:label>
@@ -10090,6 +10851,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://bib.schema.org/translationOfWork"/>
         <rdfs:label xml:lang="en">translationOfWork</rdfs:label>
@@ -10108,6 +10870,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/translator"/>
         <rdfs:label xml:lang="en">translator</rdfs:label>
@@ -10126,6 +10896,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                    <rdf:Description rdf:about="http://schema.org/Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The product that this structured value is referring to.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/typeOfGood"/>
         <rdfs:label xml:lang="en">typeOfGood</rdfs:label>
@@ -10144,6 +10922,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The typical expected age range, e.g. &apos;7-9&apos;, &apos;11-&apos;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/typicalAgeRange"/>
         <rdfs:label xml:lang="en">typicalAgeRange</rdfs:label>
@@ -10154,6 +10933,23 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/unitCode -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/unitCode">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/PropertyValue"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                    <rdf:Description rdf:about="http://schema.org/TypeAndQuantityNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/unitCode"/>
         <rdfs:label xml:lang="en">unitCode</rdfs:label>
@@ -10164,6 +10960,16 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/unitText -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/unitText">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/PropertyValue"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                    <rdf:Description rdf:about="http://schema.org/TypeAndQuantityNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 &lt;a href=&apos;unitCode&apos;&gt;unitCode&lt;/a&gt;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/unitText"/>
@@ -10176,6 +10982,15 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
 
     <owl:ObjectProperty rdf:about="http://schema.org/unnamedSourcesPolicy">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/publishingPrinciples"/>
+        <rdfs:domain rdf:resource="http://schema.org/Organization"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CreativeWork"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">For an &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/Organization&quot;&gt;Organization&lt;/a&gt; (typically a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsMediaOrganization&quot;&gt;NewsMediaOrganization&lt;/a&gt;), a statement about policy on use of unnamed sources and the decision process required.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/unnamedSourcesPolicy"/>
         <rdfs:label xml:lang="en">unnamedSourcesPolicy</rdfs:label>
@@ -10236,6 +11051,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
         <rdfs:comment xml:lang="en">URL of the item.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/url"/>
         <rdfs:label xml:lang="en">url</rdfs:label>
@@ -10246,6 +11062,8 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/urlTemplate -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/urlTemplate">
+        <rdfs:domain rdf:resource="http://schema.org/EntryPoint"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">An url template (RFC6570) that will be used to construct the target of the execution of the action.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/urlTemplate"/>
         <rdfs:label xml:lang="en">urlTemplate</rdfs:label>
@@ -10277,6 +11095,8 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/validFor -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/validFor">
+        <rdfs:domain rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:range rdf:resource="http://schema.org/Duration"/>
         <rdfs:comment xml:lang="en">The duration of validity of a permit or similar thing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/validFor"/>
         <rdfs:label xml:lang="en">validFor</rdfs:label>
@@ -10287,6 +11107,18 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/validFrom -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/validFrom">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Demand"/>
+                    <rdf:Description rdf:about="http://schema.org/LocationFeatureSpecification"/>
+                    <rdf:Description rdf:about="http://schema.org/MonetaryAmount"/>
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                    <rdf:Description rdf:about="http://schema.org/OpeningHoursSpecification"/>
+                    <rdf:Description rdf:about="http://schema.org/PriceSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -10302,6 +11134,8 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/validIn -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/validIn">
+        <rdfs:domain rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:range rdf:resource="http://schema.org/AdministrativeArea"/>
         <rdfs:comment xml:lang="en">The geographic area where a permit or similar thing is valid.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/validIn"/>
         <rdfs:label xml:lang="en">validIn</rdfs:label>
@@ -10312,6 +11146,18 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/validThrough -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/validThrough">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Demand"/>
+                    <rdf:Description rdf:about="http://schema.org/LocationFeatureSpecification"/>
+                    <rdf:Description rdf:about="http://schema.org/MonetaryAmount"/>
+                    <rdf:Description rdf:about="http://schema.org/Offer"/>
+                    <rdf:Description rdf:about="http://schema.org/OpeningHoursSpecification"/>
+                    <rdf:Description rdf:about="http://schema.org/PriceSpecification"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -10336,6 +11182,16 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Boolean"/>
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/StructuredValue"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The value of the quantitative value or property value node.&lt;br/&gt;&lt;br/&gt;
 
 &lt;ul&gt;
@@ -10384,6 +11240,17 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Enumeration"/>
+                    <rdf:Description rdf:about="http://schema.org/PropertyValue"/>
+                    <rdf:Description rdf:about="http://schema.org/QualitativeValue"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                    <rdf:Description rdf:about="http://schema.org/StructuredValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/valueReference"/>
         <rdfs:label xml:lang="en">valueReference</rdfs:label>
@@ -10401,6 +11268,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/PropertyValue"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The variableMeasured property can indicate (repeated as necessary) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/variableMeasured"/>
         <rdfs:label xml:lang="en">variableMeasured</rdfs:label>
@@ -10419,6 +11294,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The Value-added Tax ID of the organization or person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/vatID"/>
         <rdfs:label xml:lang="en">vatID</rdfs:label>
@@ -10436,6 +11312,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The version of the CreativeWork embodied by a specified resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/version"/>
         <rdfs:label xml:lang="en">version</rdfs:label>
@@ -10453,6 +11337,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Clip"/>
+                    <rdf:Description rdf:about="http://schema.org/VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">An embedded video object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/video"/>
         <rdfs:label xml:lang="en">video</rdfs:label>
@@ -10463,6 +11355,8 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/videoFormat -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/videoFormat">
+        <rdfs:domain rdf:resource="http://schema.org/BroadcastService"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/videoFormat"/>
         <rdfs:label xml:lang="en">videoFormat</rdfs:label>
@@ -10480,6 +11374,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The frame size of the video.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/videoFrameSize"/>
         <rdfs:label xml:lang="en">videoFrameSize</rdfs:label>
@@ -10497,6 +11392,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
         <rdfs:comment xml:lang="en">The quality of the video.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/videoQuality"/>
         <rdfs:label xml:lang="en">videoQuality</rdfs:label>
@@ -10515,6 +11411,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/WarrantyPromise"/>
     </owl:ObjectProperty>
     
 
@@ -10529,6 +11426,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/WarrantyScope"/>
         <rdfs:comment xml:lang="en">The scope of the warranty promise.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/warrantyScope"/>
         <rdfs:label xml:lang="en">warrantyScope</rdfs:label>
@@ -10547,6 +11445,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
         <rdfs:comment xml:lang="en">The weight of the product or person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/weight"/>
         <rdfs:label xml:lang="en">weight</rdfs:label>
@@ -10557,6 +11456,22 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
     <!-- http://schema.org/width -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/width">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/MediaObject"/>
+                    <rdf:Description rdf:about="http://schema.org/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Distance"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The width of the item.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/width"/>
         <rdfs:label xml:lang="en">width</rdfs:label>
@@ -10595,6 +11510,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/workExample"/>
         <rdfs:label xml:lang="en">workExample</rdfs:label>
@@ -10612,6 +11528,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">A work featured in some event, e.g. exhibited in an ExhibitionEvent.
        Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/workFeatured"/>
@@ -10631,6 +11548,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/ContactPoint"/>
+                    <rdf:Description rdf:about="http://schema.org/Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A contact location for a person&apos;s place of work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/workLocation"/>
         <rdfs:label xml:lang="en">workLocation</rdfs:label>
@@ -10649,6 +11574,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">A work performed in some event, for example a play performed in a TheaterEvent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/workPerformed"/>
         <rdfs:label xml:lang="en">workPerformed</rdfs:label>
@@ -10666,6 +11592,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:comment xml:lang="en">A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation Tây du ký bình khảo.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://bib.schema.org/workTranslation"/>
         <rdfs:label xml:lang="en">workTranslation</rdfs:label>
@@ -10683,6 +11610,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:comment xml:lang="en">Organizations that the person works for.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/worksFor"/>
         <rdfs:label xml:lang="en">worksFor</rdfs:label>
@@ -10700,6 +11628,14 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/worstRating"/>
         <rdfs:label xml:lang="en">worstRating</rdfs:label>
@@ -10718,6 +11654,7 @@ Use this to explicitly override general opening hours brought in scope by &lt;a 
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/XPathType"/>
         <rdfs:comment xml:lang="en">An XPath, e.g. of a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/SpeakableSpecification&quot;&gt;SpeakableSpecification&lt;/a&gt; or &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/WebPageElement&quot;&gt;WebPageElement&lt;/a&gt;. In the latter case, multiple matches within a page can constitute a single conceptual &quot;Web page element&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/xpath"/>
         <rdfs:label xml:lang="en">xpath</rdfs:label>
@@ -13322,8 +14259,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
      -->
 
     <rdf:Description rdf:about="http://schema.org/actionApplication">
-        <rdfs:comment xml:lang="en">An application that can complete the request.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/actionApplication"/>
+        <rdfs:comment xml:lang="en">An application that can complete the request.</rdfs:comment>
         <rdfs:label xml:lang="en">actionApplication</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/actor">
@@ -13347,8 +14284,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
         <rdfs:isDefinedBy rdf:resource="https://schema.org/answerCount"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/areaServed">
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/areaServed"/>
         <rdfs:label xml:lang="en">areaServed</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/areaServed"/>
         <rdfs:comment xml:lang="en">The geographic area where a service or offered item is provided.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/attendee">
@@ -13378,8 +14315,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/award">
         <rdfs:label xml:lang="en">award</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/award"/>
         <rdfs:comment xml:lang="en">An award won by or for this item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/award"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/birthDate">
         <rdfs:isDefinedBy rdf:resource="https://schema.org/birthDate"/>
@@ -13388,8 +14325,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/broker">
         <rdfs:isDefinedBy rdf:resource="https://schema.org/broker"/>
-        <rdfs:label xml:lang="en">broker</rdfs:label>
         <rdfs:comment xml:lang="en">An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.</rdfs:comment>
+        <rdfs:label xml:lang="en">broker</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/closes">
         <rdfs:isDefinedBy rdf:resource="https://schema.org/closes"/>
@@ -13397,8 +14334,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
         <rdfs:comment xml:lang="en">The closing hour of the place or service on the given day(s) of the week.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/colleague">
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/colleague"/>
         <rdfs:comment xml:lang="en">A colleague of the person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/colleague"/>
         <rdfs:label xml:lang="en">colleague</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/commentCount">
@@ -13412,8 +14349,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
         <rdfs:comment xml:lang="en">A contact point for a person or organization.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/containedInPlace">
-        <rdfs:comment xml:lang="en">The basic containment relation between a place and one that contains it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/containedInPlace"/>
+        <rdfs:comment xml:lang="en">The basic containment relation between a place and one that contains it.</rdfs:comment>
         <rdfs:label xml:lang="en">containedInPlace</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/contentReferenceTime">
@@ -13438,8 +14375,8 @@ Commonly used values:&lt;br/&gt;&lt;br/&gt;
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/dateModified">
         <rdfs:label xml:lang="en">dateModified</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/dateModified"/>
         <rdfs:comment xml:lang="en">The date on which the CreativeWork was most recently modified or when the item&apos;s entry was modified within a DataFeed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/dateModified"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/datePublished">
         <rdfs:isDefinedBy rdf:resource="https://schema.org/datePublished"/>
@@ -13518,8 +14455,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
         <rdfs:isDefinedBy rdf:resource="https://schema.org/event"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/expires">
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/expires"/>
         <rdfs:label xml:lang="en">expires</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/expires"/>
         <rdfs:comment xml:lang="en">Date the content expires and is no longer useful or available. For example a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/VideoObject&quot;&gt;VideoObject&lt;/a&gt; or &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/NewsArticle&quot;&gt;NewsArticle&lt;/a&gt; whose availability or relevance is time-limited, or a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/ClaimReview&quot;&gt;ClaimReview&lt;/a&gt; fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/founder">
@@ -13743,14 +14680,14 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
         <rdfs:comment xml:lang="en">The date the item e.g. vehicle was purchased by the current owner.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/ratingCount">
-        <rdfs:comment xml:lang="en">The count of total number of ratings.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/ratingCount"/>
+        <rdfs:comment xml:lang="en">The count of total number of ratings.</rdfs:comment>
         <rdfs:label xml:lang="en">ratingCount</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/recourseLoan">
         <rdfs:label xml:lang="en">recourseLoan</rdfs:label>
-        <rdfs:comment xml:lang="en">The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://schema.org/recourseLoan"/>
+        <rdfs:comment xml:lang="en">The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/releaseDate">
         <rdfs:label xml:lang="en">releaseDate</rdfs:label>
@@ -13798,8 +14735,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
         <rdfs:comment xml:lang="en">The tangible thing generated by the service, e.g. a passport, permit, etc.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/sibling">
-        <rdfs:isDefinedBy rdf:resource="https://schema.org/sibling"/>
         <rdfs:comment xml:lang="en">A sibling of the person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/sibling"/>
         <rdfs:label xml:lang="en">sibling</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://schema.org/significantLink">
