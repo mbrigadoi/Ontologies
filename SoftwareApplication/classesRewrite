@@ -1,0 +1,157 @@
+Thing
+	name				Text
+	description			Text
+	url					URL
+	
+Thing>SoftwareApplication
+	author				Person or Organization
+	firstRelease		SoftwareRelease
+	language			ProgrammingLanguage
+	price				SoftwarePrice
+	dependencies		Dependency
+	platform			Platform
+	license				License
+	stableRelease		SoftwareRelease
+	developer			Person or Organization
+	category			SoftwareCategory
+	requirements		Requirement
+
+Thing>SoftwareCategory
+
+Thing>SoftwareCategory>OperatingSystem
+	kernelType			String
+	defaultUI			String
+	family				String
+	
+Thing>ProgrammingLanguage
+	author				Person or Organization
+	firstRelease		SoftwareRelease
+	stableRelease		SoftwareRelease
+	paradigm			ProgrammingParadigm
+	license				License
+	influenced			ProgrammingLanguage
+	influencedBy		ProgrammingLanguage
+	typeSystem			TypeSystem
+
+Thing>TypeSystem
+
+Thing>ProgrammingParadigm
+Thing>ProgrammingParadigm>MultiParadigm
+Thing>ProgrammingParadigm>Functional
+Thing>ProgrammingParadigm>ObjectOriented
+Thing>ProgrammingParadigm>Reflective
+
+Thing>Person
+	address				Address
+	worksFor			Person or Organization
+	job					Job
+	birthday			Date
+	email				Email
+	familyName			Text
+	gender				GenderType
+	netWorth			MonetaryAmount
+Thing>Person>Worker
+	
+Thing>DataType>Text
+Thing>DataType>Text>URL
+Thing>DataType>Bool
+Thing>DataType>Number
+Thing>DataType>Number>Integer
+Thing>DataType>Number>Float
+Thing>DataType>Date
+Thing>Location>Country
+Thing>Location>Address
+	country				Country
+	city				Text
+	street				Text
+	number				Text
+	postalCode			Integer
+Thing>Economics>MonetaryAmount
+	value				Float
+	currency			Text
+	minValue			Number
+	maxValue			Number
+		
+Thing>Economics>MonetaryAmount>AnnualSalary
+Thing>Economics>MonetaryAmount>AnnualSalary>HighSalary
+Thing>Economics>MonetaryAmount>AnnualSalary>MediumSalary
+Thing>Economics>MonetaryAmount>AnnualSalary>LowSalary
+
+Thing>Economics>SoftwarePrice
+	version				Text
+	price				MonetaryAmount
+	
+Thing>SoftwareRelease
+	date				Date
+	version				Text
+
+Thing>Job
+	salary				AnnualSalary
+	timetable			Timetable
+	hoursPerDay			Number
+	employer			Person or Organization
+	netWorth			MonetaryAmount
+
+Thing>Schedule
+	start				Time
+	end					Time
+	pause				Number
+Thing>Timetable
+	schedule			Schedule
+
+Thing>Job>CEO
+Thing>Job>Developer
+Thing>GenderType
+Thing>GenderType>Male
+Thing>GenderType>Female
+Thing>OrganizationType>ProfitOrganization
+Thing>OrganizationType>NonProfitOrganization
+
+Thing>Organization
+	address				Address
+	email				Text
+	employee			Worker
+	numberOfEmployee	Number
+	founder				Person
+	founded				Date
+	headquarter			Address
+	owns				Organization
+	ownedBy				Organization
+	industry			Text
+	type				OrganizationType
+	
+Thing>Organization>Foundation
+	focus				Text
+	founder				Person
+Thing>Organization>Corporation
+	value				MonetaryAmount
+	revenue				MonetaryAmount		
+	ceo					Worker	
+Thing>License
+	publisher			Organization
+	copyright			Boolean
+	rightToPerform		Boolean
+	rightToDisplay		Boolean
+	rightToCopy			Boolean
+	RightToModify		Boolean
+	RightToDistribute	Boolean
+	RightToSublicense	Boolean
+Thing>License>PublicDomain
+Thing>License>Permissive
+Thing>License>Copyleft
+Thing>License>Proprietary
+
+Thing>Requirement
+	minValue			Text
+Thing>Requirement>CPU
+Thing>Requirement>RAM
+Thing>Requirement>Storage
+Thing>InstructionSet
+Thing>InstructionSet>CISC
+Thing>InstructionSet>RISC
+
+Thing>Platform
+	bits				Number
+	license				License
+	instructionSet		InstructionSet
+

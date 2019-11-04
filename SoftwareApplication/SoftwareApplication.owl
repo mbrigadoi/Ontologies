@@ -26,6 +26,8 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Address">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Location"/>
         <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Country"/>
+        <rdfs:comment>The mailing address.</rdfs:comment>
+        <rdfs:label>Address</rdfs:label>
     </owl:Class>
     
 
@@ -45,7 +47,7 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Architecture">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
         <rdfs:comment>Set of rules and methods that describe the functionality, organization, and implementation of computer systems.</rdfs:comment>
-        <rdfs:label>Architecture</rdfs:label>
+        <rdfs:label>Platform</rdfs:label>
     </owl:Class>
     
 
@@ -86,6 +88,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/CPU">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Requirement"/>
+        <rdfs:comment>Minimum CPU frequency for executing the application.</rdfs:comment>
+        <rdfs:label>CPURequirement</rdfs:label>
     </owl:Class>
     
 
@@ -94,6 +98,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Copyleft">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/License"/>
+        <rdfs:comment>Practice of offering people the right to freely distribute copies and modified versions of a work.</rdfs:comment>
+        <rdfs:label>Copyleft</rdfs:label>
     </owl:Class>
     
 
@@ -103,6 +109,8 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Corporation">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Organization"/>
         <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Foundation"/>
+        <rdfs:comment>A business organization.</rdfs:comment>
+        <rdfs:label>Corporation</rdfs:label>
     </owl:Class>
     
 
@@ -111,6 +119,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Country">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Location"/>
+        <rdfs:comment>A country.</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
     </owl:Class>
     
 
@@ -134,6 +144,16 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Declarative -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Declarative">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:comment>Paradiugm that expresses the logic of a computation without describing its control flow.</rdfs:comment>
+        <rdfs:label>DeclarativeParadigm</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Developer -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Developer">
@@ -150,6 +170,16 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
         <rdfs:comment>Entity concerning the economic sphere</rdfs:comment>
         <rdfs:label>Economics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Environment -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Environment">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Runtime environments and shared libraries that are not included in the application distribution package, but required to run the application.</rdfs:comment>
+        <rdfs:label>Dependency</rdfs:label>
     </owl:Class>
     
 
@@ -180,6 +210,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Foundation">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Organization"/>
+        <rdfs:comment>A non profit organization that has been created in order to provide money for a particular group of people in need of help or for a particular type of study.</rdfs:comment>
+        <rdfs:label>Foundation</rdfs:label>
     </owl:Class>
     
 
@@ -187,7 +219,9 @@
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Functional -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Functional">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Declarative"/>
+        <rdfs:comment>Paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.</rdfs:comment>
+        <rdfs:label>FunctionalParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -214,6 +248,18 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/IDE">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareCategory"/>
+        <rdfs:comment>Integrated Development Environment: a software application that provides comprehensive facilities to computer programmers for software development.</rdfs:comment>
+        <rdfs:label>IDE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:comment>Paradigm that uses statements that change a program&apos;s state.</rdfs:comment>
+        <rdfs:label>ImperativeParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -262,6 +308,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Location">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Entities defining properties related to the geopolitical position.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
     </owl:Class>
     
 
@@ -292,6 +340,16 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MetaprogrammingParadigm -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MetaprogrammingParadigm">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:comment>Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data.</rdfs:comment>
+        <rdfs:label>MetaprogrammingParadigm</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MonetaryAmount -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MonetaryAmount">
@@ -305,7 +363,18 @@
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MultiParadigm -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MultiParadigm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Declarative"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MetaprogrammingParadigm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:comment>Paradigm composed by two or more programming paradigms.</rdfs:comment>
+        <rdfs:label>MultiParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -315,6 +384,8 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/NonProfitOrganization">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/OrganizationType"/>
         <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProfitOrganization"/>
+        <rdfs:comment>A non-profit organization is a group organized for purposes other than generating profit and in which no part of the organization&apos;s income is distributed to its members.</rdfs:comment>
+        <rdfs:label>NonProfitOrganization</rdfs:label>
     </owl:Class>
     
 
@@ -332,7 +403,10 @@
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ObjectOriented -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ObjectOriented">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Procedural"/>
+        <rdfs:comment>Paradigm based on the concept of &quot;objects&quot;, which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).</rdfs:comment>
+        <rdfs:label>ObjectOrientedParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -341,6 +415,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/OperatingSystem">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareCategory"/>
+        <rdfs:comment>System software that manages computer hardware, software resources, and provides common services for computer programs.</rdfs:comment>
+        <rdfs:label>OperatingSystem</rdfs:label>
     </owl:Class>
     
 
@@ -349,6 +425,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Organization">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>An organized group of people with a particular purpose.</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
     </owl:Class>
     
 
@@ -357,6 +435,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/OrganizationType">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Type of organization: with profit or non profit.</rdfs:comment>
+        <rdfs:label>OrganizationType</rdfs:label>
     </owl:Class>
     
 
@@ -365,6 +445,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Permissive">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/License"/>
+        <rdfs:comment>Permissive license requiring little more than attributing the original portions of the licensed code to the original developers in your own code and/or documentation.</rdfs:comment>
+        <rdfs:label>Permissive</rdfs:label>
     </owl:Class>
     
 
@@ -373,14 +455,18 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Person">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>A human being regarded as an individual.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Platform -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Procedural -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Platform">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Procedural">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative"/>
+        <rdfs:comment>Paradigm based on the concept of the procedure call: a series of computational stepsto be executed in the defined order.</rdfs:comment>
+        <rdfs:label>ProceduralParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -389,6 +475,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProfitOrganization">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/OrganizationType"/>
+        <rdfs:comment>Organization whose primary goal is making money.</rdfs:comment>
+        <rdfs:label>ProfitOrganization</rdfs:label>
     </owl:Class>
     
 
@@ -397,6 +485,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingLanguage">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Formal language, which comprises a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms.</rdfs:comment>
+        <rdfs:label>ProgrammingLanguage</rdfs:label>
     </owl:Class>
     
 
@@ -405,6 +495,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>A way to classify programming languages based on their features.</rdfs:comment>
+        <rdfs:label>ProgrammingParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -413,6 +505,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Proprietary">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/License"/>
+        <rdfs:comment>Non-free computer software for which the software&apos;s publisher or another person retains intellectual property rights.</rdfs:comment>
+        <rdfs:label>Proprietary</rdfs:label>
     </owl:Class>
     
 
@@ -421,6 +515,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/PublicDomain">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/License"/>
+        <rdfs:comment>There is absolutely no ownership such as copyright, trademark, or patent.</rdfs:comment>
+        <rdfs:label>PublicDomain</rdfs:label>
     </owl:Class>
     
 
@@ -429,6 +525,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/RAM">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Requirement"/>
+        <rdfs:comment>Minimum amount of RAM required for excuting the aplication.</rdfs:comment>
+        <rdfs:label>RAMRequirement</rdfs:label>
     </owl:Class>
     
 
@@ -446,7 +544,9 @@
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Reflective -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Reflective">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ProgrammingParadigm"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MetaprogrammingParadigm"/>
+        <rdfs:comment>The language allows a process to examine, introspect, and modify its own structure and behavior.</rdfs:comment>
+        <rdfs:label>ReflectiveParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -455,6 +555,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Requirement">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Minimum requirements of the environment needed for executing the application.</rdfs:comment>
+        <rdfs:label>Requirement</rdfs:label>
     </owl:Class>
     
 
@@ -463,6 +565,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Schedule">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Formal day schedule for a worker.</rdfs:comment>
+        <rdfs:label>WorkSchedule</rdfs:label>
     </owl:Class>
     
 
@@ -471,6 +575,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareApplication">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>A software application.</rdfs:comment>
+        <rdfs:label>SoftwareApplication</rdfs:label>
     </owl:Class>
     
 
@@ -479,6 +585,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareCategory">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Type of software application.</rdfs:comment>
+        <rdfs:label>SoftwareCategory</rdfs:label>
     </owl:Class>
     
 
@@ -497,6 +605,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareRelease">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Version code and date of a certain edition of an application.</rdfs:comment>
+        <rdfs:label>SoftwareRelease</rdfs:label>
     </owl:Class>
     
 
@@ -505,6 +615,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Storage">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Requirement"/>
+        <rdfs:comment>Minimum available space for installing and executing the aplication.</rdfs:comment>
+        <rdfs:label>StorageRequirement</rdfs:label>
     </owl:Class>
     
 
@@ -542,6 +654,9 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Timetable">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Formal week schedule for a worker.
+Composed by a schedule per weekday.</rdfs:comment>
+        <rdfs:label>Timetable</rdfs:label>
     </owl:Class>
     
 
@@ -550,6 +665,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/TypeSystem">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Thing"/>
+        <rdfs:comment>Set of rules that assigns a property called type to the various constructs of a computer program, such as variables, expressions, functions or modules.</rdfs:comment>
+        <rdfs:label>TypeSystem</rdfs:label>
     </owl:Class>
     
 
@@ -570,6 +687,8 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/WebBrowser">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/SoftwareCategory"/>
+        <rdfs:comment>Software application for accessing information on the World Wide Web.</rdfs:comment>
+        <rdfs:label>WebBrowser</rdfs:label>
     </owl:Class>
     
 
@@ -578,6 +697,8 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Worker">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Person"/>
+        <rdfs:comment>Person with a job.</rdfs:comment>
+        <rdfs:label>Worker</rdfs:label>
     </owl:Class>
     
 
@@ -637,10 +758,9 @@ Queries and fragment components are optional.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Functional"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MultiParadigm"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/ObjectOriented"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Reflective"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Declarative"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/Imperative"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication/MetaprogrammingParadigm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
