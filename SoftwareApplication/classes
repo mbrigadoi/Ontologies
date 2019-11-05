@@ -8,7 +8,7 @@ Thing>SoftwareApplication
 	firstRelease		SoftwareRelease
 	language			ProgrammingLanguage
 	price				SoftwarePrice
-	architecture		Architecture
+	dependencies		Dependency
 	platform			Platform
 	license				License
 	stableRelease		SoftwareRelease
@@ -22,9 +22,6 @@ Thing>SoftwareCategory>OperatingSystem
 	kernelType			String
 	defaultUI			String
 	family				String
-	
-Thing>Platform
-	architecture		Architecture
 	
 Thing>ProgrammingLanguage
 	author				Person or Organization
@@ -46,7 +43,6 @@ Thing>ProgrammingParadigm>Reflective
 
 Thing>Person
 	address				Address
-	worksFor			Person or Organization
 	job					Job
 	birthday			Date
 	email				Email
@@ -101,6 +97,7 @@ Thing>Schedule
 	pause				Number
 Thing>Timetable
 	schedule			Schedule
+Thing>Dependency
 
 Thing>Job>CEO
 Thing>Job>Developer
@@ -114,7 +111,7 @@ Thing>Organization
 	address				Address
 	email				Text
 	employee			Worker
-	numberOfEmployee	Number
+	numberOfEmployees	Integer
 	founder				Person
 	founded				Date
 	headquarter			Address
@@ -153,7 +150,7 @@ Thing>InstructionSet
 Thing>InstructionSet>CISC
 Thing>InstructionSet>RISC
 
-Thing>Architecture
+Thing>Platform
 	bits				Number
 	license				License
 	instructionSet		InstructionSet
