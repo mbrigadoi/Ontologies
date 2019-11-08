@@ -2,6 +2,7 @@ Thing
 	name				Text
 	description			Text
 	url					URL
+	has					Thing
 	
 Thing>SoftwareApplication
 	author				Person or Organization
@@ -9,7 +10,8 @@ Thing>SoftwareApplication
 	language			ProgrammingLanguage
 	price				SoftwarePrice
 	dependencies		Dependency
-	platform			Platform
+	architecture		Architecture
+	operatingSystem		OperatingSystem
 	license				License
 	stableRelease		SoftwareRelease
 	developer			Person or Organization
@@ -19,9 +21,9 @@ Thing>SoftwareApplication
 Thing>SoftwareCategory
 
 Thing>SoftwareCategory>OperatingSystem
-	kernelType			String
-	defaultUI			String
-	family				String
+	kernelType			Text
+	defaultUI			Text
+	family				Text
 	
 Thing>ProgrammingLanguage
 	author				Person or Organization
@@ -45,7 +47,7 @@ Thing>Person
 	address				Address
 	job					Job
 	birthday			Date
-	email				Email
+	email				Text
 	familyName			Text
 	gender				GenderType
 	netWorth			MonetaryAmount
@@ -58,12 +60,10 @@ Thing>DataType>Number
 Thing>DataType>Number>Integer
 Thing>DataType>Number>Float
 Thing>DataType>Date
-Thing>Location>Country
-Thing>Location>Address
-	country				Country
+Thing>Address
+	country				Text
 	city				Text
 	street				Text
-	number				Text
 	postalCode			Integer
 Thing>Economics>MonetaryAmount
 	value				Float
@@ -81,7 +81,7 @@ Thing>Economics>SoftwarePrice
 	price				MonetaryAmount
 	
 Thing>SoftwareRelease
-	date				Date
+	releaseDate			Date
 	version				Text
 
 Thing>Job
@@ -89,9 +89,8 @@ Thing>Job
 	timetable			Timetable
 	hoursPerDay			Number
 	employer			Person or Organization
-	netWorth			MonetaryAmount
 
-Thing>Schedule
+Thing>WorkSchedule
 	start				Time
 	end					Time
 	pause				Number
@@ -114,15 +113,12 @@ Thing>Organization
 	numberOfEmployees	Integer
 	founder				Person
 	founded				Date
-	headquarter			Address
 	owns				Organization
 	ownedBy				Organization
-	industry			Text
-	type				OrganizationType
+	organizationType	OrganizationType
 	
 Thing>Organization>Foundation
 	focus				Text
-	founder				Person
 Thing>Organization>Corporation
 	value				MonetaryAmount
 	revenue				MonetaryAmount		
@@ -150,7 +146,7 @@ Thing>InstructionSet
 Thing>InstructionSet>CISC
 Thing>InstructionSet>RISC
 
-Thing>Platform
+Thing>Architecture
 	bits				Number
 	license				License
 	instructionSet		InstructionSet
