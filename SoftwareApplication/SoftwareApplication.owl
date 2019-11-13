@@ -555,6 +555,28 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/latestRelease -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/latestRelease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:comment>Latest stable release of a software or a language.</rdfs:comment>
+        <rdfs:label>latestRelease</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/license -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/license">
@@ -764,7 +786,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
         <rdfs:comment>Price of a software application.</rdfs:comment>
         <rdfs:label>price</rdfs:label>
     </owl:ObjectProperty>
@@ -953,28 +975,6 @@
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
         <rdfs:comment>Work schedule of a timetable.</rdfs:comment>
         <rdfs:label>schedule</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/stableRelease -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/stableRelease">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:comment>Latest stable release of a software or a language.</rdfs:comment>
-        <rdfs:label>stableRelease</rdfs:label>
     </owl:ObjectProperty>
     
 
