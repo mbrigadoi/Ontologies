@@ -52,7 +52,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
         <rdfs:comment>Architecture needed by the software application to run.</rdfs:comment>
         <rdfs:label>architecture</rdfs:label>
@@ -227,7 +227,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Dependency"/>
         <rdfs:comment>Runtime environments and shared libraries that are not included in the application distribution package, but required to run the application.</rdfs:comment>
         <rdfs:label>dependency</rdfs:label>
@@ -255,7 +255,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -547,7 +547,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
         <rdfs:comment>Programming language used for developing a software application.</rdfs:comment>
         <rdfs:label>language</rdfs:label>
@@ -589,7 +589,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
                     <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -680,7 +680,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem"/>
         <rdfs:comment>Operating system needed to run the software application.</rdfs:comment>
         <rdfs:label>operatingSystem</rdfs:label>
@@ -785,7 +785,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
         <rdfs:comment>Price of a software application.</rdfs:comment>
         <rdfs:label>price</rdfs:label>
@@ -829,7 +829,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement"/>
         <rdfs:comment>Requirements of a software application.</rdfs:comment>
         <rdfs:label>requirement</rdfs:label>
@@ -858,6 +858,7 @@
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/rights"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/License"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Boolean"/>
         <rdfs:comment>Right to copy an intellectual property.</rdfs:comment>
@@ -1042,6 +1043,7 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/url">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
