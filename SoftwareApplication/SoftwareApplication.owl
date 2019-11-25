@@ -672,6 +672,26 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Hybrid"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microkernel"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Monolithic"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
+        <rdfs:comment>The type of kernel of an operating system. 
+Can be monolithic, microkernel or both (hybrid).</rdfs:comment>
+        <rdfs:label>KernelType</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address">
@@ -1228,6 +1248,84 @@ Queries and fragment components are optional.</rdfs:comment>
     
 
 
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Alphabet -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Alphabet"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Edge -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Edge"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Google -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Google"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#GoogleChrome -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#GoogleChrome"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Hybrid -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Hybrid">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Linux -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Linux"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxFoundation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxFoundation"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microkernel -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microkernel">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Monolithic -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Monolithic">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation"/>
+    
+
+
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#USD -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#USD">
@@ -1235,6 +1333,12 @@ Queries and fragment components are optional.</rdfs:comment>
         <rdfs:comment>US Dollar in ISO-4217 format.</rdfs:comment>
         <rdfs:label>USD</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows"/>
     
 
 
@@ -1294,6 +1398,13 @@ Queries and fragment components are optional.</rdfs:comment>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Proprietary"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/PublicDomain"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microkernel"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Monolithic"/>
+        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
