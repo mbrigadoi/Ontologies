@@ -24,85 +24,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/address -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/address">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
-        <rdfs:comment>Physical address of the item.</rdfs:comment>
-        <rdfs:label>address</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/architecture -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/architecture">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
-        <rdfs:comment>Architecture needed by the software application to run.</rdfs:comment>
-        <rdfs:label>architecture</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/author -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/author">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment>The author of the item.</rdfs:comment>
-        <rdfs:label>author</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/birthday -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/birthday">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Date"/>
-        <rdfs:comment>Date of birth.</rdfs:comment>
-        <rdfs:label>birthday</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/bits -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/bits">
@@ -112,51 +33,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer"/>
-        <rdfs:comment>Numbero of bits of an architecture, indicating the number of bits used for a simple variable, CPU registers, memory addresses and data transferred for every memory writing/reading.</rdfs:comment>
+        <rdfs:comment>Number of bits of an architecture, indicating the number of bits used for a simple variable, CPU registers, memory addresses and data transferred for every memory writing/reading.</rdfs:comment>
         <rdfs:label>bits</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/category -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/category">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareCategory"/>
-        <rdfs:comment>The category of a software application.</rdfs:comment>
-        <rdfs:label>category</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ceo -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ceo">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Corporation"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker"/>
-        <rdfs:comment>The CEO of a Corporation.</rdfs:comment>
-        <rdfs:label>ceo</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/city -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/city">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>A city or town.</rdfs:comment>
-        <rdfs:label>city</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -176,9 +54,139 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/country -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/firstRelease -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/country">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/firstRelease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:comment>First stable release.</rdfs:comment>
+        <rdfs:label>firstRelease</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/foundationDate -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/foundationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Date"/>
+        <rdfs:comment>Date of foundation.</rdfs:comment>
+        <rdfs:label>foundationDate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
+        <rdfs:comment>Physical address of the item.</rdfs:comment>
+        <rdfs:label>hasAddress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasArchitecture -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasArchitecture">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
+        <rdfs:comment>Architecture needed by the software application to run.</rdfs:comment>
+        <rdfs:label>hasArchitecture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>The author of the item.</rdfs:comment>
+        <rdfs:label>hasAuthor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareCategory"/>
+        <rdfs:comment>The category of a software application.</rdfs:comment>
+        <rdfs:label>hasCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCeo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCeo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Corporation"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
+        <rdfs:comment>The CEO of a Corporation.</rdfs:comment>
+        <rdfs:label>hasCeo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCity -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>A city or town.</rdfs:comment>
+        <rdfs:label>hasCity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCountry -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCountry">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -186,14 +194,14 @@
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>A country.</rdfs:comment>
-        <rdfs:label>country</rdfs:label>
+        <rdfs:label>hasCountry</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/currency -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCurrency -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/currency">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCurrency">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -201,28 +209,14 @@
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>The currency in which the monetary amount is expressed.</rdfs:comment>
-        <rdfs:label>currency</rdfs:label>
+        <rdfs:label>hasCurrency</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/defaultUI -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDependency -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/defaultUI">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>Default UI of an operating system.</rdfs:comment>
-        <rdfs:label>defaultUI</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/dependency -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/dependency">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDependency">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -230,28 +224,28 @@
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Dependency"/>
         <rdfs:comment>Runtime environments and shared libraries that are not included in the application distribution package, but required to run the application.</rdfs:comment>
-        <rdfs:label>dependency</rdfs:label>
+        <rdfs:label>hasDependency</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/description -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDescription -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/description">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDescription">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>A description of the item.</rdfs:comment>
-        <rdfs:label>description</rdfs:label>
+        <rdfs:label>hasDescription</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/developer -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDeveloper -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/developer">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasDeveloper">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
@@ -265,87 +259,14 @@
             </owl:Class>
         </rdfs:range>
         <rdfs:comment>The developer of a software application.</rdfs:comment>
-        <rdfs:label>developer</rdfs:label>
+        <rdfs:label>hasDeveloper</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/email -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFamily -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/email">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>Email address.</rdfs:comment>
-        <rdfs:label>email</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/employee -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/employee">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/employer"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker"/>
-        <rdfs:comment>Employee of an organization.</rdfs:comment>
-        <rdfs:label>employee</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/employer -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/employer">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment>Person or organization that gives a job.</rdfs:comment>
-        <rdfs:label>employer</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/end -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/end">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-        <owl:propertyDisjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/start"/>
-        <rdfs:comment>End of work time.</rdfs:comment>
-        <rdfs:label>end</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/family -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/family">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFamily">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -353,182 +274,42 @@
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>Family of an operating system.</rdfs:comment>
-        <rdfs:label>family</rdfs:label>
+        <rdfs:label>hasFamily</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/familyName -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFocus -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/familyName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>Family name. The last name of a Person.</rdfs:comment>
-        <rdfs:label>familyName</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/firstRelease -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/firstRelease">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:comment>First stable release.</rdfs:comment>
-        <rdfs:label>firstRelease</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/focus -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/focus">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFocus">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Foundation"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>The focus of a foundation.</rdfs:comment>
-        <rdfs:label>focus</rdfs:label>
+        <rdfs:label>hasFocus</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/founded -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFounder -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/founded">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Date"/>
-        <rdfs:comment>Date of foundation.</rdfs:comment>
-        <rdfs:label>founded</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/founder -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/founder">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasFounder">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
         <rdfs:comment>Founder of an organization.</rdfs:comment>
-        <rdfs:label>founder</rdfs:label>
+        <rdfs:label>hasFounder</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/gender -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasKernelType -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/gender">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/GenderType"/>
-        <rdfs:comment>Gender of a person.</rdfs:comment>
-        <rdfs:label>gender</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasJob -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasJob">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <rdfs:comment>An activity, often regular and often performed in exchange for payment</rdfs:comment>
-        <rdfs:label>hasJob</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hoursPerDay -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hoursPerDay">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Number"/>
-        <rdfs:comment>Number of working hours per day in a job.</rdfs:comment>
-        <rdfs:label>hoursPerDay</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/influenced -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/influenced">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/influencedBy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:comment>Programming languages influenced by the entity.</rdfs:comment>
-        <rdfs:label>influenced</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/influencedBy -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/influencedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:comment>Programming language that influences the entity.</rdfs:comment>
-        <rdfs:label>influencedBy</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/instructionSet -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/instructionSet">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/InstructionSetArchitecture"/>
-        <rdfs:comment>The instruction set of an architecture.</rdfs:comment>
-        <rdfs:label>instructionSet</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/kernelType -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/kernelType">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasKernelType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -536,21 +317,154 @@
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
         <rdfs:comment>Type of kernel of an operating system.</rdfs:comment>
-        <rdfs:label>kernelType</rdfs:label>
+        <rdfs:label>hasKernelType</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/language -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasLicense -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/language">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasLicense">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/License"/>
+        <rdfs:comment>A license that applies to this item.</rdfs:comment>
+        <rdfs:label>hasLicense</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasName -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>The name of the item.</rdfs:comment>
+        <rdfs:label>hasName</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPostalCode -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPostalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>The postal code.</rdfs:comment>
+        <rdfs:label>hasPostalCode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPrice -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPrice">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:comment>Programming language used for developing a software application.</rdfs:comment>
-        <rdfs:label>language</rdfs:label>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
+        <rdfs:comment>Price of a software application.</rdfs:comment>
+        <rdfs:label>hasPrice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPublisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/License"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
+        <rdfs:comment>Organization that publishes a license.</rdfs:comment>
+        <rdfs:label>hasPublisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasRevenue -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasRevenue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
+        <rdfs:comment>Revenue of a corporation.</rdfs:comment>
+        <rdfs:label>hasRevenue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasStreet -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasStreet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>The street address.</rdfs:comment>
+        <rdfs:label>hasStreet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasUrl -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasUrl">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>URL of the item.</rdfs:comment>
+        <rdfs:label>hasUrl</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Float"/>
+        <rdfs:comment>Value of a monetary amount.</rdfs:comment>
+        <rdfs:label>hasValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasVersion -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+        <rdfs:comment>Version of a release.</rdfs:comment>
+        <rdfs:label>hasVersion</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -562,114 +476,10 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
         <rdfs:comment>Latest stable release of a software or a language.</rdfs:comment>
         <rdfs:label>latestRelease</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/license -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/license">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Architecture"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/License"/>
-        <rdfs:comment>A license that applies to this item.</rdfs:comment>
-        <rdfs:label>license</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/maxValue -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/maxValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Number"/>
-        <rdfs:comment>The upper value of an amount of money if it has a range.</rdfs:comment>
-        <rdfs:label>maxValue</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/minValue -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/minValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Number"/>
-        <rdfs:comment>The lower value of an amount of money if it has a range.</rdfs:comment>
-        <rdfs:label>minValue</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/name -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>The name of the item.</rdfs:comment>
-        <rdfs:label>name</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/netWorth -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/netWorth">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:comment>Net worth of a person.</rdfs:comment>
-        <rdfs:label>netWorth</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/numberOfEmployees -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/numberOfEmployees">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer"/>
-        <rdfs:comment>Number of employees in an organization.</rdfs:comment>
-        <rdfs:label>numberOfEmployees</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -736,78 +546,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/paradigm -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/paradigm">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-        <rdfs:comment>The paradigm of a programming language.</rdfs:comment>
-        <rdfs:label>paradigm</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/pause -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/pause">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-        <rdfs:comment>Number of pause minutes in a work schedule.</rdfs:comment>
-        <rdfs:label>pause</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/postalCode -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/postalCode">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>The postal code.</rdfs:comment>
-        <rdfs:label>postalCode</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/price -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/price">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:comment>Price of a software application.</rdfs:comment>
-        <rdfs:label>price</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/publisher -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/publisher">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/License"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-        <rdfs:comment>Organization that publishes a license.</rdfs:comment>
-        <rdfs:label>publisher</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/releaseDate -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/releaseDate">
@@ -819,35 +557,6 @@
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Date"/>
         <rdfs:comment>The release day of a new software application version.</rdfs:comment>
         <rdfs:label>releaseDate</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/requirement -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/requirement">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement"/>
-        <rdfs:comment>Requirements of a software application.</rdfs:comment>
-        <rdfs:label>requirement</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/revenue -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/revenue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:comment>Revenue of a corporation.</rdfs:comment>
-        <rdfs:label>revenue</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -952,136 +661,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/salary -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/salary">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary"/>
-        <rdfs:comment>Annual salary received for a job.</rdfs:comment>
-        <rdfs:label>salary</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/schedule -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/schedule">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Timetable"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
-        <rdfs:comment>Work schedule of a timetable.</rdfs:comment>
-        <rdfs:label>schedule</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/start -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/start">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-        <rdfs:comment>Start of work time.</rdfs:comment>
-        <rdfs:label>start</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/street -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/street">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Address"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>The street address.</rdfs:comment>
-        <rdfs:label>street</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/timetable -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/timetable">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Timetable"/>
-        <rdfs:comment>Weekly timetable of a job.</rdfs:comment>
-        <rdfs:label>timetable</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/typeSystem -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/typeSystem">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/TypeSystem"/>
-        <rdfs:comment>Type system of a programming language.</rdfs:comment>
-        <rdfs:label>typeSystem</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/url -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/url">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>URL of the item.</rdfs:comment>
-        <rdfs:label>url</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/value -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/value">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Float"/>
-        <rdfs:comment>Value of a monetary amount.</rdfs:comment>
-        <rdfs:label>value</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/version -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/version">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareRelease"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
-        <rdfs:comment>Version of a release.</rdfs:comment>
-        <rdfs:label>version</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1100,22 +679,22 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/city"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCity"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/country"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasCountry"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/postalCode"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasPostalCode"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/street"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasStreet"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
                     </owl:Restriction>
@@ -1125,16 +704,6 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
         <rdfs:comment>The mailing address.</rdfs:comment>
         <rdfs:label>Address</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
-        <rdfs:comment>Salary perceived annually by a worker.</rdfs:comment>
-        <rdfs:label>AnnualSalary</rdfs:label>
     </owl:Class>
     
 
@@ -1163,38 +732,6 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DataType"/>
         <rdfs:comment>Boolean: True or False.</rdfs:comment>
         <rdfs:label>Boolean</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CEO -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CEO">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasJob"/>
-                        <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CEO"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Developer"/>
-        <rdfs:comment>Chief Executive Officer, is the most senior corporate, executive, or administrative officer in charge of managing an organization.</rdfs:comment>
-        <rdfs:label>CEO</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CPURequirement -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CPURequirement">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement"/>
-        <rdfs:comment>Minimum CPU frequency for executing the application.</rdfs:comment>
-        <rdfs:label>CPURequirement</rdfs:label>
     </owl:Class>
     
 
@@ -1279,43 +816,12 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DeclarativeParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DeclarativeParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-        <rdfs:comment>Paradiugm that expresses the logic of a computation without describing its control flow.</rdfs:comment>
-        <rdfs:label>DeclarativeParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Dependency -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Dependency">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
         <rdfs:comment>Runtime environments and shared libraries that are not included in the application distribution package, but required to run the application.</rdfs:comment>
         <rdfs:label>Dependency</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Developer -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Developer">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasJob"/>
-                        <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Developer"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-        <rdfs:comment>Computer programmer that creates software.</rdfs:comment>
-        <rdfs:label>Developer</rdfs:label>
     </owl:Class>
     
 
@@ -1357,110 +863,12 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/FunctionalParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/FunctionalParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DeclarativeParadigm"/>
-        <rdfs:comment>Paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.</rdfs:comment>
-        <rdfs:label>FunctionalParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/GenderType -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/GenderType">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/female"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/male"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>An enumeration of genders.</rdfs:comment>
-        <rdfs:label>GenderType</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/HighSalary -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/HighSalary">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/currency"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#USD"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/minValue"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/100000"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/IDE -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/IDE">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareCategory"/>
-        <rdfs:comment>Integrated Development Environment: a software application that provides comprehensive facilities to computer programmers for software development.</rdfs:comment>
-        <rdfs:label>IDE</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-        <rdfs:comment>Paradigm that uses statements that change a program&apos;s state.</rdfs:comment>
-        <rdfs:label>ImperativeParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/InstructionSetArchitecture -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/InstructionSetArchitecture">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CISC"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#RISC"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Entity describing the design of a Computer in terms of the basic operations it must support.</rdfs:comment>
-        <rdfs:label>InstructionSetArchitecture</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Number"/>
         <rdfs:comment>Data type: Integer.</rdfs:comment>
         <rdfs:label>Integer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>An activity, often regular and often performed in exchange for payment</rdfs:comment>
-        <rdfs:label>Job</rdfs:label>
     </owl:Class>
     
 
@@ -1475,93 +883,12 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/LowSalary -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/LowSalary">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/currency"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#USD"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/maxValue"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/25000"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/minValue"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/0"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MediumSalary -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MediumSalary">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/currency"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#USD"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/maxValue"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/100000"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/minValue"/>
-                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/25000"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/AnnnualSalary"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MetaprogrammingParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MetaprogrammingParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-        <rdfs:comment>Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data.</rdfs:comment>
-        <rdfs:label>MetaprogrammingParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Economics"/>
         <rdfs:comment>A monetary value or range.</rdfs:comment>
         <rdfs:label>MonetaryAmount</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MultiParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MultiParadigm">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DeclarativeParadigm"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm"/>
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MetaprogrammingParadigm"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-        <rdfs:comment>Paradigm composed by two or more programming paradigms.</rdfs:comment>
-        <rdfs:label>MultiParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -1574,7 +901,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/revenue"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasRevenue"/>
                         <owl:hasValue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/0"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1598,21 +925,11 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ObjectOrientedParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ObjectOrientedParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm"/>
-        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProceduralParadigm"/>
-        <rdfs:comment>Paradigm based on the concept of &quot;objects&quot;, which can contain data, in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).</rdfs:comment>
-        <rdfs:label>ObjectOrientedParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareCategory"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WebBrowser"/>
         <rdfs:comment>System software that manages computer hardware, software resources, and provides common services for computer programs.</rdfs:comment>
         <rdfs:label>OperatingSystem</rdfs:label>
     </owl:Class>
@@ -1693,16 +1010,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProceduralParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProceduralParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm"/>
-        <rdfs:comment>Paradigm based on the concept of the procedure call: a series of computational stepsto be executed in the defined order.</rdfs:comment>
-        <rdfs:label>ProceduralParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProfitOrganization -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProfitOrganization">
@@ -1711,7 +1018,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Organization"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/revenue"/>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasRevenue"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MonetaryAmount"/>
                     </owl:Restriction>
@@ -1721,40 +1028,6 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OrganizationType"/>
         <rdfs:comment>Organization whose primary goal is making money.</rdfs:comment>
         <rdfs:label>ProfitOrganization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingLanguage">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/paradigm"/>
-                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/typeSystem"/>
-                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/TypeSystem"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Formal language, which comprises a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms.</rdfs:comment>
-        <rdfs:label>ProgrammingLanguage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ProgrammingParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>A way to classify programming languages based on their features.</rdfs:comment>
-        <rdfs:label>ProgrammingParadigm</rdfs:label>
     </owl:Class>
     
 
@@ -1847,36 +1120,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/RAMRequirement -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/RAMRequirement">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement"/>
-        <rdfs:comment>Minimum amount of RAM required for excuting the aplication.</rdfs:comment>
-        <rdfs:label>RAMRequirement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ReflectiveParadigm -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ReflectiveParadigm">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MetaprogrammingParadigm"/>
-        <rdfs:comment>The language allows a process to examine, introspect, and modify its own structure and behavior.</rdfs:comment>
-        <rdfs:label>ReflectiveParadigm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Minimum requirements of the environment needed for executing the application.</rdfs:comment>
-        <rdfs:label>Requirement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/SoftwareApplication">
@@ -1904,14 +1147,14 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasVersion"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/releaseDate"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Date"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/version"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Text"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1919,16 +1162,6 @@
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
         <rdfs:comment>Version code and date of a certain edition of an application.</rdfs:comment>
         <rdfs:label>SoftwareRelease</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/StorageRequirement -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/StorageRequirement">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Requirement"/>
-        <rdfs:comment>Minimum available space for installing and executing the aplication.</rdfs:comment>
-        <rdfs:label>StorageRequirement</rdfs:label>
     </owl:Class>
     
 
@@ -1962,34 +1195,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Timetable -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Timetable">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/schedule"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Formal week schedule for a worker.
-Composed by a schedule per weekday.</rdfs:comment>
-        <rdfs:label>Timetable</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/TypeSystem -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/TypeSystem">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Set of rules that assigns a property called type to the various constructs of a computer program, such as variables, expressions, functions or modules.</rdfs:comment>
-        <rdfs:label>TypeSystem</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/URL -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/URL">
@@ -2012,58 +1217,6 @@ Queries and fragment components are optional.</rdfs:comment>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WorkSchedule">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/end"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/pause"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/start"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Time"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Thing"/>
-        <rdfs:comment>Formal day schedule for a worker.</rdfs:comment>
-        <rdfs:label>WorkSchedule</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Worker">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/hasJob"/>
-                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Job"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Person"/>
-        <rdfs:comment>Person with a job.</rdfs:comment>
-        <rdfs:label>Worker</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2072,26 +1225,6 @@ Queries and fragment components are optional.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CISC -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CISC">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/InstructionSetArchitecture"/>
-        <rdfs:comment>Instruction set architecture. Many instruction types with different lengths whose execution may require many clock cycles.</rdfs:comment>
-        <rdfs:label>CISC</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#RISC -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#RISC">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/InstructionSetArchitecture"/>
-        <rdfs:comment>Instruction set architecture. Few instructions with fixed length whose execution requires few clock cycles.</rdfs:comment>
-        <rdfs:label>RISC</rdfs:label>
-    </owl:NamedIndividual>
     
 
 
@@ -2115,26 +1248,6 @@ Queries and fragment components are optional.</rdfs:comment>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/female -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/female">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/GenderType"/>
-        <rdfs:comment>The female gender.</rdfs:comment>
-        <rdfs:label>female</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/male -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/male">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/GenderType"/>
-        <rdfs:comment>The male gender.</rdfs:comment>
-        <rdfs:label>male</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/true -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/true">
@@ -2151,26 +1264,6 @@ Queries and fragment components are optional.</rdfs:comment>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer"/>
         <rdfs:comment>The integer value 0.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/100000 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/100000">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer"/>
-        <rdfs:comment>The integer value 100000 (100k).</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/25000 -->
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/25000">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Integer"/>
-        <rdfs:comment>The integer value 25000 (25k).</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2196,42 +1289,10 @@ Queries and fragment components are optional.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/CPURequirement"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/RAMRequirement"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/StorageRequirement"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Copyleft"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Permissive"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/Proprietary"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/PublicDomain"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/DeclarativeParadigm"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/ImperativeParadigm"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MetaprogrammingParadigm"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/HighSalary"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/LowSalary"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/MediumSalary"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/IDE"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/OperatingSystem"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl/WebBrowser"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
