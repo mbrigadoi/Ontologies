@@ -1,0 +1,36 @@
+# PREFIXES
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#>
+
+# BASE
+SELECT ?subject ?property ?object
+WHERE { ?subject ?property ?object }
+	
+# QUERY 1
+SELECT ?ceoName ?corporation ?software
+WHERE {
+	?software rdf:type :SoftwareApplication .
+	?software :hasAuthor ?corporation .
+	?corporation :hasCeo ?ceo .
+	?ceo :name ?ceoName .
+}
+
+# QUERY 2
+SELECT ?softwareName ?licenseName ?licenseType
+WHERE {
+	?software rdf:type ?softwareType .
+	?softwareType rdfs:subClassOf* :SoftwareRelease .
+	?software :hasLicense ?license .
+	?license rdf:type ?licenseType .
+	?licenseType rdfs:subClassOf* :License .
+	?licenseType owl:equivalentClass/(owl:intersectionOf/rdf:rest*/rdf:first)+ ?eq .
+	?eq owl:onProperty :rightToCopy .
+	?eq owl:hasValue :true .
+	?software :name ?softwareName .
+	?license :name ?licenseName .
+}
+
+#QUERY 3

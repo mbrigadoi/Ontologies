@@ -1261,6 +1261,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ARM">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#32bitsArchitecture"/>
+        <name>ARM 32bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1269,6 +1270,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ARM64">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#64bitsArchitecture"/>
+        <name>ARM64 64bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1278,7 +1280,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Alphabet">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Corporation"/>
         <hasAddress rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Googleplex"/>
-        <hasCeo rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LarryPage"/>
+        <hasCeo rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#SundarPichai"/>
         <hasFounder rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LarryPage"/>
         <hasFounder rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#SergeyBrin"/>
         <hasRevenue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AlphabetRevenue"/>
@@ -1293,6 +1295,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AlphabetRevenue">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Alphabet revenue</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">136820000000.00</value>
     </owl:NamedIndividual>
     
@@ -1303,6 +1306,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>all</currency>
+        <name>Amount 0</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</value>
     </owl:NamedIndividual>
     
@@ -1322,6 +1326,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Blink">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#BrowserEngine"/>
+        <name>Blink browser engine</name>
     </owl:NamedIndividual>
     
 
@@ -1341,6 +1346,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ChromeLicense">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ProprietaryLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Google"/>
+        <name>Chrome license</name>
     </owl:NamedIndividual>
     
 
@@ -1349,6 +1355,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#DOS">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystemFamily"/>
+        <name>DOS OS family</name>
     </owl:NamedIndividual>
     
 
@@ -1361,6 +1368,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft"/>
         <hasCategory rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebBrowser"/>
         <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Edge_v44.18362.449.0"/>
+        <name>Edge web browser</name>
     </owl:NamedIndividual>
     
 
@@ -1369,6 +1377,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#EdgeHTML">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#BrowserEngine"/>
+        <name>EdgeHTML browser engine</name>
     </owl:NamedIndividual>
     
 
@@ -1381,6 +1390,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasEngine rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#EdgeHTML"/>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10License"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
+        <name>Edge version 0.10.10049</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-30T00:00:00</releaseDate>
         <requirement>Windows 10 or later</requirement>
         <url>https://www.microsoft.com/windows/microsoft-edge</url>
@@ -1397,6 +1407,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasEngine rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Blink"/>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10License"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
+        <name>Edge version 44.18362.449.0</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-12T00:00:00</releaseDate>
         <requirement>Windows 10 or later</requirement>
         <url>https://www.microsoft.com/windows/microsoft-edge</url>
@@ -1412,27 +1423,29 @@ Queries and fragment components are optional.</rdfs:comment>
         <firstRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Phoenix_v0.1"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation"/>
         <hasCategory rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebBrowser"/>
-        <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v70.0.1"/>
+        <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v71.0"/>
+        <name>Firefox web browser</name>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v70.0.1 -->
+    <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v71.0 -->
 
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v70.0.1">
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Firefox_v71.0">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebBrowserRelease"/>
         <hasDeveloper rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation"/>
         <hasEngine rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Gecko"/>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MPLv2.0"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
-        <releaseDate>2019-11-31</releaseDate>
+        <name>Firefox version 71.0</name>
+        <releaseDate>2019-12-03</releaseDate>
         <requirement>Android Jelly Bean or later</requirement>
         <requirement>Linux all versions</requirement>
         <requirement>OS X 10.9 or later</requirement>
         <requirement>Windows 7 or later</requirement>
         <requirement>iOS 11 or later</requirement>
         <url>https://www.mozilla.org/firefox/</url>
-        <version>70.0.0.1</version>
+        <version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.0</version>
     </owl:NamedIndividual>
     
 
@@ -1442,6 +1455,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#GPLv2">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CopyleftLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#RichardStallman"/>
+        <name>GPL version 2 license</name>
     </owl:NamedIndividual>
     
 
@@ -1450,6 +1464,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Gecko">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#BrowserEngine"/>
+        <name>Gecko browser engine</name>
     </owl:NamedIndividual>
     
 
@@ -1477,6 +1492,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Google"/>
         <hasCategory rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebBrowser"/>
         <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#GoogleChrome_v78.0.3904.108"/>
+        <name>Google Chrome web browser</name>
     </owl:NamedIndividual>
     
 
@@ -1489,6 +1505,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasEngine rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebKit"/>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ChromeLicense"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
+        <name>GoogleChrome version 0.2.149</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-09-02T00:00:00</releaseDate>
         <requirement>Linux all versions</requirement>
         <requirement>Windows XP or later</requirement>
@@ -1506,6 +1523,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasEngine rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Blink"/>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ChromeLicense"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
+        <name>GoogleChrome version 78.0.3904.108</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-18T00:00:00</releaseDate>
         <requirement>Linux all versions</requirement>
         <requirement>Windows 7 or later</requirement>
@@ -1521,6 +1539,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#GoogleRevenue">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Google revenue</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66000000000.00</value>
     </owl:NamedIndividual>
     
@@ -1532,6 +1551,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Address"/>
         <city>Mountain View, CA</city>
         <country>USA</country>
+        <name>Googleplex</name>
         <postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94043</postalCode>
         <street>1600 Amphitheatre Parkway</street>
     </owl:NamedIndividual>
@@ -1552,6 +1572,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Hybrid">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+        <name>Hybrid kernel</name>
     </owl:NamedIndividual>
     
 
@@ -1560,6 +1581,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IA-32">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#32bitsArchitecture"/>
+        <name>IA-32 32bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1568,6 +1590,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IBM386">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#32bitsArchitecture"/>
+        <name>IBM386 32bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1601,6 +1624,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasCategory rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystem"/>
         <hasRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Linux_v4.19"/>
         <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Linux_v5.4.0"/>
+        <name>Linux operating system</name>
         <rdfs:comment>The Unix-like operating system Linux based on the Linux Kernel.</rdfs:comment>
         <rdfs:label>Linux</rdfs:label>
     </owl:NamedIndividual>
@@ -1611,6 +1635,7 @@ Queries and fragment components are optional.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxCommunity">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Community"/>
+        <name>Linux community</name>
     </owl:NamedIndividual>
     
 
@@ -1620,6 +1645,7 @@ Queries and fragment components are optional.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxEarlyLicense">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CopyleftLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinusTorvalds"/>
+        <name>Linux early license</name>
         <url>https://gunkies.org/wiki/Linux_0.01</url>
     </owl:NamedIndividual>
     
@@ -1634,6 +1660,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <hasFounder rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxCommunity"/>
         <focus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building sustainable ecosystems around open source projects to accelerate technology development, industry adoption.</focus>
         <foundationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</foundationDate>
+        <name>Linux Foundation</name>
     </owl:NamedIndividual>
     
 
@@ -1644,6 +1671,7 @@ Queries and fragment components are optional.</rdfs:comment>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Address"/>
         <city>San Francisco, CA</city>
         <country>USA</country>
+        <name>Linux Foundation main office</name>
         <postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94129</postalCode>
         <street>1 Letterman Drive
 Building D, Suite D4700</street>
@@ -1661,6 +1689,7 @@ Building D, Suite D4700</street>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#LinuxEarlyLicense"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IBM386"/>
+        <name>Linux version 0.01</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-09-17T00:00:00</releaseDate>
         <url>https://gunkies.org/wiki/Linux_0.01</url>
         <version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.01</version>
@@ -1684,6 +1713,7 @@ Building D, Suite D4700</street>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC32"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC64"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#x86_64"/>
+        <name>Linux version 4.19</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-22T00:00:00</releaseDate>
         <url>https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v4.19</url>
         <version>4.19.86</version>
@@ -1708,6 +1738,7 @@ Building D, Suite D4700</street>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC32"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC64"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#x86_64"/>
+        <name>Linux version 5.4.0</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-24T00:00:00</releaseDate>
         <url>https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v5.4</url>
         <version>5.4.0</version>
@@ -1718,8 +1749,9 @@ Building D, Suite D4700</street>
     <!-- https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MPLv1.0 -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MPLv1.0">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CopyleftLicense"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PermissiveLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MitchellBaker"/>
+        <name>MPL version 1 license</name>
     </owl:NamedIndividual>
     
 
@@ -1729,6 +1761,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MPLv2.0">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#CopyleftLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation"/>
+        <name>MPL version 2 license</name>
     </owl:NamedIndividual>
     
 
@@ -1737,6 +1770,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microkernel">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+        <name>Microkernel</name>
     </owl:NamedIndividual>
     
 
@@ -1751,6 +1785,7 @@ Building D, Suite D4700</street>
         <hasFounder rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PaulAllen"/>
         <hasRevenue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MicrosoftRevenue"/>
         <foundationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-04-04T00:00:00</foundationDate>
+        <name>Microsoft Corporation</name>
     </owl:NamedIndividual>
     
 
@@ -1761,6 +1796,7 @@ Building D, Suite D4700</street>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Address"/>
         <city>Redmond, WA</city>
         <country>USA</country>
+        <name>Microsoft headquarter</name>
         <postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98052</postalCode>
         <street>One Microsoft Way</street>
     </owl:NamedIndividual>
@@ -1772,6 +1808,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MicrosoftRevenue">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Microsoft revenue</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">125800000000.00</value>
     </owl:NamedIndividual>
     
@@ -1791,6 +1828,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Monolithic">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#KernelType"/>
+        <name>Monolithic kernel</name>
     </owl:NamedIndividual>
     
 
@@ -1805,6 +1843,7 @@ Building D, Suite D4700</street>
         <hasRevenue rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaRevenue"/>
         <ownedBy rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaFoundation"/>
         <foundationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-08-03T00:00:00</foundationDate>
+        <name>Mozilla Corporation</name>
     </owl:NamedIndividual>
     
 
@@ -1818,6 +1857,7 @@ Building D, Suite D4700</street>
         <owns rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaCorporation"/>
         <focus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Promote choice, innovation on the Internet.</focus>
         <foundationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-07-15T00:00:00</foundationDate>
+        <name>Mozilla Foundation</name>
     </owl:NamedIndividual>
     
 
@@ -1828,6 +1868,7 @@ Building D, Suite D4700</street>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Address"/>
         <city>Mountain View, CA</city>
         <country>USA</country>
+        <name>Mozilla headquarter</name>
         <postalCode>94043-0801</postalCode>
         <street>1981 Landings Drive</street>
     </owl:NamedIndividual>
@@ -1839,6 +1880,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaOrganization">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Community"/>
         <description>Organization created by Netscape for development purposes, and formed by some of its employees.</description>
+        <name>Mozilla Organization</name>
     </owl:NamedIndividual>
     
 
@@ -1848,6 +1890,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MozillaRevenue">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Mozilla corporation revenue</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">562300000.00</value>
     </owl:NamedIndividual>
     
@@ -1857,6 +1900,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#NonProfitOrganization">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OrganizationType"/>
+        <name>Non-profit organization</name>
         <rdfs:comment>A non-profit organization is a group organized for purposes other than generating profit and in which no part of the organization&apos;s income is distributed to its members.</rdfs:comment>
         <rdfs:label>NonProfitOrganization</rdfs:label>
     </owl:NamedIndividual>
@@ -1867,6 +1911,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystem">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#SoftwareCategory"/>
+        <name>Operating system</name>
         <rdfs:comment>System software that manages computer hardware, software resources, and provides common services for computer programs.</rdfs:comment>
         <rdfs:label>OperatingSystem</rdfs:label>
     </owl:NamedIndividual>
@@ -1892,6 +1937,7 @@ Building D, Suite D4700</street>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MPLv1.0"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#AmountZero"/>
         <foundationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-09-23T00:00:00</foundationDate>
+        <name>Phoenix (Firefox) version 0.1</name>
         <requirement>8MB minimum storage</requirement>
         <requirement>Linux all versions</requirement>
         <requirement>Windows IA-32</requirement>
@@ -1905,6 +1951,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC32">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#32bitsArchitecture"/>
+        <name>PowerPC 32bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1913,6 +1960,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#PowerPC64">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#64bitsArchitecture"/>
+        <name>PowerPC 64bit Architecture</name>
     </owl:NamedIndividual>
     
 
@@ -1921,6 +1969,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ProfitOrganization">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OrganizationType"/>
+        <name>Profit organization</name>
         <rdfs:comment>Organization whose primary goal is making money.</rdfs:comment>
         <rdfs:label>ProfitOrganization</rdfs:label>
     </owl:NamedIndividual>
@@ -1971,6 +2020,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Unix-like">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystemFamily"/>
+        <name>Unix-like OS family</name>
     </owl:NamedIndividual>
     
 
@@ -1979,6 +2029,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebBrowser">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#SoftwareCategory"/>
+        <name>Web browser</name>
         <rdfs:comment>Software application for accessing information on the World Wide Web.</rdfs:comment>
         <rdfs:label>WebBrowser</rdfs:label>
     </owl:NamedIndividual>
@@ -1989,6 +2040,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WebKit">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#BrowserEngine"/>
+        <name>Blink browser engine</name>
     </owl:NamedIndividual>
     
 
@@ -2001,6 +2053,7 @@ Building D, Suite D4700</street>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft"/>
         <hasCategory rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystem"/>
         <latestRelease rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10Pro_1903"/>
+        <name>Windows operating system</name>
     </owl:NamedIndividual>
     
 
@@ -2015,6 +2068,7 @@ Building D, Suite D4700</street>
         <hasLicense rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WindowsEarlyLicense"/>
         <hasPrice rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows1.0Price"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IA-32"/>
+        <name>Windows version 1.0</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-11-20T00:00:00</releaseDate>
         <url>https://www.microsoft.com/windows/</url>
         <version rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</version>
@@ -2027,6 +2081,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows1.0Price">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Windows 1.0 price</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.00</value>
     </owl:NamedIndividual>
     
@@ -2037,6 +2092,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10HomePrice">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Windows 10 Home edition price</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">139.00</value>
     </owl:NamedIndividual>
     
@@ -2055,6 +2111,7 @@ Building D, Suite D4700</street>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ARM64"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IA-32"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#x86_64"/>
+        <name>Windows 10 Home version 1903</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-22T00:00:00</releaseDate>
         <url>https://www.microsoft.com/windows/</url>
         <version>10.0.18362.449</version>
@@ -2067,6 +2124,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10License">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ProprietaryLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft"/>
+        <name>Windows 10 license</name>
     </owl:NamedIndividual>
     
 
@@ -2076,6 +2134,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Windows10ProPrice">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#MonetaryAmount"/>
         <currency>USD</currency>
+        <name>Windows 10 Pro edition price</name>
         <value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">199.99</value>
     </owl:NamedIndividual>
     
@@ -2094,6 +2153,7 @@ Building D, Suite D4700</street>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ARM64"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#IA-32"/>
         <needsArchitecture rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#x86_64"/>
+        <name>Windows 10 Pro version 1903</name>
         <releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-22T00:00:00</releaseDate>
         <url>https://www.microsoft.com/windows/</url>
         <version>10.0.18362.449</version>
@@ -2106,6 +2166,7 @@ Building D, Suite D4700</street>
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WindowsEarlyLicense">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#ProprietaryLicense"/>
         <hasAuthor rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#Microsoft"/>
+        <name>Windows early license</name>
     </owl:NamedIndividual>
     
 
@@ -2114,6 +2175,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#WindowsNT">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#OperatingSystemFamily"/>
+        <name>Windows NT OS family</name>
     </owl:NamedIndividual>
     
 
@@ -2142,6 +2204,7 @@ Building D, Suite D4700</street>
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#x86_64">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#64bitsArchitecture"/>
+        <name>x86_64 64bit Architecture</name>
     </owl:NamedIndividual>
     
 
