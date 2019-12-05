@@ -9,28 +9,118 @@ PREFIX : <https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/Software
 SELECT ?subject ?property ?object
 WHERE { ?subject ?property ?object }
 	
-# QUERY 1
-SELECT ?ceoName ?corporation ?software
+# QUERY 1 - Nomi degli amministratori delegati ed indirizzi delle corporation con revenue maggiore di 100B USD produttrici dei software
+SELECT ?ceoName ?corporationName ?addressName ?value (GROUP_CONCAT(DISTINCT ?softwareName; SEPARATOR="; ") AS ?softwareName)
 WHERE {
+	# cerco le istanze software di tipo SoftwareApplication
 	?software rdf:type :SoftwareApplication .
+	# per i software cerco gli autori
 	?software :hasAuthor ?corporation .
+	# per gli autori cerco il CEO
+	# così escludo tutti i software con sviluppatori persone, community o fondazioni
 	?corporation :hasCeo ?ceo .
+	# ottengo la revenue dell'azienda produttrice
+	?corporation :hasRevenue ?revenue .
+	# ottengo l'indirizzo dell'azienda
+	?corporation :hasAddress ?address .
+	# ottengo valore della revenue
+	?revenue :value ?value .
+	# e valuta
+	?revenue :currency ?currency .
+	# filtro il valore > 100B
+	FILTER(?value > 100000000000) .
+	# filtro la valuta al dollaro statunitense
+	FILTER REGEX(?currency, "USD") .
+	# ottengo il nome del ceo .
 	?ceo :name ?ceoName .
-}
-
-# QUERY 2
-SELECT ?softwareName ?licenseName ?licenseType
-WHERE {
-	?software rdf:type ?softwareType .
-	?softwareType rdfs:subClassOf* :SoftwareRelease .
-	?software :hasLicense ?license .
-	?license rdf:type ?licenseType .
-	?licenseType rdfs:subClassOf* :License .
-	?licenseType owl:equivalentClass/(owl:intersectionOf/rdf:rest*/rdf:first)+ ?eq .
-	?eq owl:onProperty :rightToCopy .
-	?eq owl:hasValue :true .
+	# ottengo il nome del software
 	?software :name ?softwareName .
+	# ottengo il nome della corporation
+	?corporation :name ?corporationName .
+	# ottengo il nome dell'indirizzo
+	?address :name ?addressName .
+	
+}
+GROUP BY ?ceoName ?corporation ?label ?value ?addressName ?corporationName
+ORDER BY ?corporation
+
+# QUERY 2 - Nomi di software e licenze, di software con licenze che danno diritto alla copia
+SELECT ?releaseName ?licenseName ?licenseType
+WHERE {
+    # cerco tutte le istanze con una classe 
+	?release rdf:type ?releaseType .
+	# filtro le istanze di tipo o sottoclasse di SoftwareRelease
+	?releaseType rdfs:subClassOf* :SoftwareRelease .
+	# per ogni release cerco la licenza
+	?release :hasLicense ?license .
+	# per ogni licenza ne ottengo il tipo
+	?license rdf:type ?licenseType .
+	# filtro solo i tipi che sono sottoclassi di License
+	?licenseType rdfs:subClassOf* :License .
+	# per ogni tipo ottengo la classe equivalente
+	# dalla classe equivalente estraggo le intersezioni che la compongono, che è una collezione
+	# una collezione viene rappresentata per ogni elemento come un valore first contenente l'espressione e rest il nodo successivo
+	# così facendo si ottengono tutti i nodi e, da ogni nodo, se estraggono tutte le espressioni (first)
+	?licenseType owl:equivalentClass/(owl:intersectionOf/rdf:rest*/rdf:first) ?expr .
+	# cerco tutte le espressioni con diritto di copia
+	?expr owl:onProperty :rightToCopy .
+	# e filtro quelle con valore true
+	?expr owl:hasValue :true .
+	# ottengo il nome della release
+	?release :name ?releaseName .
+	# ottengo il nome della licenza
 	?license :name ?licenseName .
 }
+ORDER BY ?releaseName
 
-#QUERY 3
+# QUERY 3 - Nomi dei software sviluppati dagli sviluppatori definiti
+SELECT ?developerName (GROUP_CONCAT(DISTINCT ?releaseNames; SEPARATOR="; ") AS ?releaseNames)
+WHERE {
+	# creo una collezioni di nomi di developer
+	VALUES ?developerName {"Linus Torvalds" "Greg Kroah-Hartman"} .
+	# cerco tutti i developer con quei nomi
+	?developer :name ?developerName .
+	# filtro le release che hanno come software le istanze cercate 
+	?release :hasDeveloper ?developer .
+	# ottengo i nomi delle release
+	?release :name ?releaseNames .
+}
+GROUP BY ?developerName
+ORDER BY ?developerName
+
+# QUERY 4 - Nomi di tutti i software di una categoria con licenza di tipo proprietario
+SELECT ?releaseName ?licenseName
+WHERE {
+    # cerco le istanze con nome la categoria voluta
+	?category :name "Web browser" .
+	# cerco i software che hanno la categoria cercata
+	?software :hasCategory ?category .
+	# per i software ottengo tutte le release che possiede
+	?software :firstRelease|:latestRelease|:hasRelease ?release .
+	# per ogni release cerco la licenza
+	?release :hasLicense ?license .
+	# filtro solo le istanze con licenza di tipo proprietario
+	?license rdf:type :ProprietaryLicense .
+	# ottengo il nome della licenza
+	?license :name ?licenseName .
+	# ottengo il nome della release
+	?release :name ?releaseName .
+}
+ORDER BY ?releaseName
+
+# QUERY 5 - Architetture a 64 bit compatibili con i sistemi operativi definiti
+SELECT ?releaseName (GROUP_CONCAT(DISTINCT ?architectureName; SEPARATOR="; ") AS ?architectureName)
+WHERE {
+    # ottengo tutte le istanze di tipo OperatingSystemRelease
+	?release rdf:type :OperatingSystemRelease .
+	# cerco tutte le istanze che hanno un'architettura
+	?release :needsArchitecture ?architecture .
+	# per ogni architettura cerco se è a 64 bit
+	?architecture rdf:type :64bitsArchitecture .
+	# ottengo il nome della release
+	?release :name ?releaseName .
+	# oottengo il nome delle architetture
+	?architecture :name ?architectureName .
+}
+GROUP BY ?releaseName
+ORDER BY ?releaseName
