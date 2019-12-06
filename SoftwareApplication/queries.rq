@@ -5,11 +5,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX : <https://raw.githubusercontent.com/mbrigadoi/Ontologies/master/SoftwareApplication/SoftwareApplication.owl#>
 
-# BASE
-SELECT ?subject ?property ?object
-WHERE { ?subject ?property ?object }
-	
-# QUERY 1 - Nomi degli amministratori delegati ed indirizzi delle corporation con revenue maggiore di 100B USD produttrici dei software
+
+# QUERY 1 - Nomi degli amministratori delegati ed indirizzi delle corporation con revenue maggiore di $100B produttrici dei software
 SELECT ?ceoName ?corporationName ?addressName ?value (GROUP_CONCAT(DISTINCT ?softwareName; SEPARATOR="; ") AS ?softwareName)
 WHERE {
 	# cerco le istanze software di tipo SoftwareApplication
